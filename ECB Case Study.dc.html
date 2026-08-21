@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F3F1EC;color:#141311;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{color:#FF6B2C}
+::selection{background:#F4581C;color:#0C0B0A}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+
+@media(max-width:860px){
+[style*="grid-template-columns: repeat(7,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(5,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(4,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(3,"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1.2fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 420px"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 1.3fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 120px 1fr"]{grid-template-columns:1fr!important;gap:4px!important}
+[style*="grid-template-columns: 44px 1.1fr 1.5fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 2.4fr"]{grid-template-columns:1.6fr .5fr 1fr!important}
+[style*="width: 56%"]{width:100%!important}
+[style*="mix-blend-mode: multiply"]{background:linear-gradient(0deg,rgba(20,6,1,.9) 6%,rgba(20,6,1,.5) 52%,rgba(20,6,1,.25))!important;mix-blend-mode:normal!important}
+nav[data-screen-label="Nav"]{flex-wrap:wrap!important;gap:10px!important;padding-left:18px!important;padding-right:18px!important}
+[style*="padding: 90px 44px"],[style*="padding: 110px 44px"],[style*="padding: 20px 44px"],[style*="padding: 26px 44px"],[style*="padding: 40px 44px"],[style*="padding: 36px 44px"],[style*="padding: 48px 44px"],[style*="padding: 0px 44px"],[style*="padding: 64px 56px"],[style*="padding: 80px 56px"],[style*="padding: 56px"],[style*="padding: 0px 30px"]{padding-left:20px!important;padding-right:20px!important}
+}
+</style>
+</helmet>
+
+<nav data-screen-label="Nav" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 30px;background:rgba(12,11,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)">
+  <a href="index.html" style="text-decoration:none;font:700 17px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#F5F3F0">vidushi<span style="color:#FF6B2C">.</span></a>
+  <div style="display:flex;align-items:center;gap:8px">
+    <a href="index.html#work" style="text-decoration:none;font:500 13.5px 'Instrument Sans',sans-serif;color:#F5F3F0;padding:9px 16px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.12);color:#fff">← All work</a>
+    <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:none;display:flex;align-items:center;gap:10px;background:#fff;color:#141311;font:600 13.5px 'Instrument Sans',sans-serif;padding:8px 8px 8px 18px;border-radius:999px;transition:transform .2s" style-hover="transform:scale(1.04);color:#141311">Get in touch<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#F4581C;color:#fff;font-size:13px">→</span></a>
+  </div>
+</nav>
+
+<div data-screen-label="Hero" style="padding:0">
+  <div style="position:relative;overflow:hidden;background:linear-gradient(115deg,#0B0B2E 0%,#1C1C54 36%,#5A2A0C 70%,#E8490F 112%);padding:90px 44px 70px;text-align:center;animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both">
+    <p style="margin:0 0 18px;font:600 13px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#FFD9C2">NHAI Emergency Control Box</p>
+    <h1 style="margin:0 auto;font:800 clamp(40px,5.4vw,76px)/1.02 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;max-width:18ch;color:#F5F3F0">Designing the emergency response system for 200 km of expressway</h1>
+    <p style="margin:26px auto 0;max-width:62ch;font:400 16px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">NHAI was deploying 200 emergency booths across a 200 km stretch of the Delhi–Mumbai Expressway. The control room system to handle every call from them didn't exist yet — no reference product, no live agents to observe, and the first module of a 10+ module platform.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:30px">
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">UX Design</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Interaction Design</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Enterprise</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Operational UX</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Government / B2G</span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:-40px auto 0;padding:0 30px;position:relative;z-index:5">
+  <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(20,19,17,.15);box-shadow:0 24px 60px rgba(20,19,17,.15);animation:fadeUp .8s .2s cubic-bezier(.2,.7,.2,1) both">
+    <img src="assets/ecb/ecb-hero.png" alt="Emergency Control Box dashboard — supervisor view" style="width:100%;display:block">
+  </div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Emergency Control Box dashboard — NHAI Delhi–Mumbai Expressway, Gurgaon to Dausa</p>
+</div>
+
+<div style="max-width:900px;margin:70px auto 0;padding:0 30px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden">
+    <div style="padding:22px 24px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Role</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">UX Design — end-to-end · Research, IA, wireframes, visual design</p></div>
+    <div style="padding:22px 24px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Team</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">1 Sr. Designer · 1 PM · Development team</p></div>
+    <div style="padding:22px 24px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Client</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">NHAI — National Highways Authority of India · 2023</p></div>
+    <div style="padding:22px 24px"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Scope</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">Delhi–Mumbai Expressway · Gurgaon to Dausa · 200 km</p></div>
+  </div>
+
+  <div style="margin-top:28px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 18px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E8490F">The 30-second read</p>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Problem</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">200 roadside emergency booths going live across 200 km of the Delhi–Mumbai Expressway — and no control-room system to answer a single call.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Constraint</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">No existing product to reference, no access to live agents in the target control room, first module in a 10+ module ATMS platform — decisions here set the pattern for everything after.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Key decision</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">Rebuilt around the call detail screen — chose a <em>parallel split view</em> (form + live map + nearest emergency resources on one screen) over a sequential form or map-dominant layout. Threw away the first week's work to get there.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">What shipped</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">ECB module delivered as part of the NHAI ATMS platform covering the 200 km stretch — agent + supervisor views, live triage panel, fake-call audit workflow, ticket integration.</span></div>
+    </div>
+  </div>
+</div>
+
+<section data-screen-label="Ch 1 Background" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter One</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">200 km. 200 booths. No existing system to handle a single call.</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:0 auto">
+    <p style="margin:0">My company was contracted to digitise a 200 km stretch of the Delhi–Mumbai Expressway — Gurgaon to Dausa — as part of NHAI's Automated Traffic Monitoring System. The Emergency Control Box (ECB) module was one critical piece: 200 physical roadside telephone booths, one installed every kilometre.</p>
+    <p style="margin:0">When a highway user operates a booth about an accident, breakdown, or medical emergency, the call rings the nearest NHAI control room. An agent answers, gathers incident details, coordinates with field teams, and dispatches the nearest help. The module had to support this entire workflow — for both agents and supervisors — with no existing system to build on.</p>
+    <p style="margin:0">On other Indian highways the pattern was the same: emergencies meant calling police (100) or a national helpline. No dedicated infrastructure, no highway-specific response system. Everything that had to happen when a booth rang — identifying location, understanding the incident, coordinating dispatch, logging the interaction — had to be designed from scratch.</p>
+  </div>
+  <div style="margin:44px auto 0">
+    <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">For the first time, a control room agent would need to —</p>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Know which booth was calling and exactly where it sat on the highway — <strong style="color:#141311;font-weight:600">before the call was even answered</strong></span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">See all simultaneous incoming calls and triage them — not pick up blind with no context</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Surface the nearest ambulance, police, and patrol contacts by location — not recall them from memory</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Keep a permanent record of every call, answered or missed — nothing could be allowed to simply disappear</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">05</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Close a prank call with a structured, auditable path — without the risk of discarding a real emergency</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">06</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Link every call to a downstream ticket and audit trail — so what was said connected to what was dispatched</span></div>
+    </div>
+  </div>
+  <div style="margin:40px auto 0;max-width:720px;background:linear-gradient(115deg,#0B0B2E,#26265E);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">The goal</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Design the ECB module from scratch — enabling agents to receive incoming calls, identify caller location and incident type, coordinate emergency response, and maintain a complete real-time record of every call. Two views: agent, and supervisor with team-level oversight and performance trends. <strong style="font-weight:600;color:#fff">The risk wasn't careless agents. It was giving agents no system to be careful with.</strong></p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 2 Research" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Two</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">Mapping a first-of-its-kind workflow without access to a single user</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">PRD deep-dive</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Two full reads — first for scope, second for the supervisor layer we'd initially missed</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">Dual journey mapping</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">End-to-end flows for both the distressed highway user and the control room agent — mapped from PRD, not assumption</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">Analogous domain research</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Freshdesk and AWS Support studied via tutorials and agent demos — the closest structural parallel to the ECB workflow</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">Supervisor layer discovery</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">A second read surfaced a scoping gap — the supervisor role needed its own view and wasn't in the initial brief</p></div>
+  </div>
+
+  <div style="margin-top:44px">
+    <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">Distressed user journey — mapped from PRD</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;overflow:hidden">
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">01</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Operates ECB booth on highway</p></div>
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">02</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Shares name, situation, location</p></div>
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">03</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Told what help is being dispatched</p></div>
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">04</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Put on hold while agent coordinates</p></div>
+      <div style="padding:16px 12px"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">05</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Receives ETA, consoled, call ends</p></div>
+    </div>
+    <p style="margin:24px 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">Agent journey — mapped from PRD</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;overflow:hidden">
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">01</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Picks up incoming ECB call</p></div>
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">02</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Gathers caller details &amp; incident</p></div>
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">03</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Puts caller on hold</p></div>
+      <div style="padding:16px 12px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">04</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Calls relevant help service</p></div>
+      <div style="padding:16px 12px"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">05</p><p style="margin:0;font:500 12.5px/1.4 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Reconnects, gives ETA, closes call</p></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:40px auto 0">
+    <p style="margin:0">Mapping both journeys surfaced the structural similarity to customer support call centres — an agent receives a distressed contact, gathers information, coordinates a response, and closes the loop. We studied Freshdesk and AWS Support to understand dashboard structure, what agents need at different moments, and workflow sequencing.</p>
+    <p style="margin:0">Then we identified where the ECB context diverged. <strong style="color:#141311;font-weight:600">Location is mission-critical and can't be typed in later — it has to be visible before the call is answered.</strong> Communication is one-directional with no callback option. And the platform is tied to NHAI's own surveillance infrastructure (VSDS, TMCS, VIDS) — no equivalent exists in B2C support tools.</p>
+    <p style="margin:0">A second close read of the PRD revealed a supervisor layer we hadn't scoped for. We designed the supervisor view first — team-wide call metrics, agent status, hourly trends — then narrowed into the agent view, which shows personal workload only.</p>
+  </div>
+
+  <div style="margin:28px auto 0;max-width:720px;background:linear-gradient(115deg,#0B0B2E,#26265E);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">A thing I got wrong early</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">My first instinct was to start with the call list — how calls display, how tabs separate answered from missed, how agents search the log. I spent the first week on this. Then I re-mapped the full agent journey step by step and found the real problem wasn't in the list. It was in the 30 seconds after pickup: <strong style="font-weight:600;color:#fff">where is the caller, what exactly happened, who is closest to help.</strong> I threw away that work and restarted with the call detail screen.</p>
+  </div>
+</section>
+
+<div style="max-width:1100px;margin:50px auto 0;padding:0 30px">
+  <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(20,19,17,.15);box-shadow:0 16px 44px rgba(20,19,17,.12)">
+    <img src="assets/ecb/ecb-call-list.png" alt="ECB call list — Answered and Missed tabs" style="width:100%;display:block">
+  </div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Call list view — Answered and Missed tabs with full search and call ID logging</p>
+</div>
+
+<section data-screen-label="Ch 3 Exploration" style="max-width:1100px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Three</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">Three directions for the call detail screen — the most critical decision in the flow</h2>
+  </div>
+  <p style="margin:0 auto;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">The call detail screen had to serve multiple simultaneous needs — capturing incident details, accessing location context, and identifying the nearest help — all at the same time, all on an active call.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:40px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+      <p style="margin:0;padding:12px 20px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#C93A2A;background:rgba(201,58,42,.08);border-bottom:1px solid rgba(20,19,17,.1)">Direction A — Rejected</p>
+      <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid rgba(20,19,17,.1)"><img src="assets/ecb/ecb-direction-a-form.png" alt="Sequential form-first direction" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+      <div style="padding:18px 20px 22px"><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">Step-by-step form</p><p style="margin:0;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Serialised tasks agents need to do simultaneously. You can't wait for the map until after logging the caller's name when a life may be at stake.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+      <p style="margin:0;padding:12px 20px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#C93A2A;background:rgba(201,58,42,.08);border-bottom:1px solid rgba(20,19,17,.1)">Direction B — Rejected</p>
+      <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid rgba(20,19,17,.1)"><img src="assets/ecb/ecb-direction-b-map.png" alt="Map-dominant direction" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+      <div style="padding:18px 20px 22px"><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">Full-screen map</p><p style="margin:0;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Better location awareness, but buries the incident form and emergency contacts — both needed at the same time as the map, not after scrolling.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1.5px solid #1E8A4A;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(30,138,74,.12)">
+      <p style="margin:0;padding:12px 20px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#1E8A4A;background:rgba(30,138,74,.08);border-bottom:1px solid rgba(20,19,17,.1)">Direction C — Chosen ✓</p>
+      <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid rgba(20,19,17,.1)"><img src="assets/ecb/ecb-call-detail.png" alt="Parallel split view direction" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+      <div style="padding:18px 20px 22px"><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">Parallel split view</p><p style="margin:0;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Incident form on the left, live map and nearest emergency contacts on the right. Agents can log while scanning — no switching, no recall under pressure.</p></div>
+    </div>
+  </div>
+  <div style="margin:28px auto 0;max-width:720px;background:rgba(30,138,74,.08);border:1px solid rgba(30,138,74,.3);border-radius:20px;padding:24px 30px">
+    <p style="margin:0;font:italic 400 14.5px/1.7 'Instrument Sans',sans-serif;color:#166A3A">The parallel split view won because it matched what agents actually needed to do simultaneously — not sequentially. Every other direction assumed agents could finish one task before starting the next. On an active emergency call, that assumption was wrong from the start.</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 4 Solution" style="max-width:1100px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 50px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Four</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">Five features, each mapped directly to a gap in the workflow</h2>
+    <p style="margin:22px auto 0;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:64ch">Every design decision in the ECB module was traceable to a specific operational failure in the manual process — not to what seemed useful in the abstract.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 01 · Live Incoming Call Panel</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">Triage before pickup — see what's ringing, where, and how many</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">A persistent panel shows all ringing ECB calls in real time. Each card surfaces the device ID and location before the agent picks up. The call list captures every call — answered, missed, or flagged — with a unique ID and a searchable log across all agents.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(20,19,17,.12);padding-top:16px">
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Device ID and location visible per card before pickup — replaces the completely blind answer workflow.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Multiple simultaneous rings expand into a callout card — agents formally claim a call via the "Attend this call" modal.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Every call gets a unique ID and is searchable across the full team log.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 44px 40px">
+        <div><div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-incoming-calls.png" alt="Multiple ECBs ringing simultaneously" style="width:100%;display:block"></div><p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Multiple ECBs ringing — device ID and location visible before pickup</p></div>
+        <div><div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-search.png" alt="Search across all calls" style="width:100%;display:block"></div><p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Search across all calls — MISSED badges inline, no tab switching needed</p></div>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 02 · Location-First Call Detail View</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">The system surfaces what the caller can't — before the conversation starts</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">The moment an agent opens an active call, they see the ECB device ID, package number, booth location on a live map, and nearby surveillance devices (VSDS / TMCS / VIDS) — all before speaking. For inactive calls, the same screen switches to a full record view with linked ticket details. One screen serves both moments — no navigation, no context-switching.</p>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-ongoing-call-detail.png" alt="Active call — device location map with nearby devices" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Active call — live device location, nearby surveillance devices, incident form, and emergency contacts on one screen</p>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 03 · Nearest Emergency Resources, Auto-Surfaced</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">No second phone call — dispatch from the same screen</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Based on the caller's package location, the system automatically surfaces the nearest ambulance, police, and patrol contacts, along with nearby ADAS vehicles with distance. Agents coordinate and dispatch without leaving the active call screen. For completed calls, the right panel switches to the linked ticket — status, priority, assigned team, and evidence.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(20,19,17,.12);padding-top:16px">
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Nearest ambulance, police, and patrol contacts pre-populated by package number — no manual lookup under a live call.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Nearby ADAS vehicles shown with distance — the closest response identified without coordination overhead.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Active call panel switches to the full ticket record on completion — one screen, two roles.</p>
+        </div>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-call-detail-ticket.png" alt="Emergency contacts and linked ticket details" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Nearest emergency contacts auto-populated by package · Ticket details on completed calls</p>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 04 · Mark as Fake Call</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">A fast exit for prank calls with a permanent audit trail</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Prank calls were flagged as an operational problem in the NHAI PRD. Agents needed a quick path to close them without the risk of accidentally dismissing a real emergency. The "Mark as Fake Call" CTA auto-disconnects the call and logs it with its own detail page — device ID, call recording, agent notes, duration — fully recoverable and auditable, attributed to the agent who closed it.</p>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-fake-call.png" alt="Fake call logged state" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">"Marked as Fake Call" badge in header · Full call record preserved for audit</p>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 05 · Attend This Call + Ticket Integration</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">A claim mechanism for busy queues and a record that outlasts the call</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">When multiple calls ring simultaneously, agents expand the callout and confirm pickup via a modal — a formal claim that prevents two agents from unknowingly picking up the same call. Every answered call can generate a ticket directly from the detail view via "+ Create Ticket", linking into the Ticket Management module with ECB ID, recording URL, incident type, and agent notes pre-populated. Missed calls persist in their own tab — nothing drops off the queue, nothing requires memory to track.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 44px 40px">
+        <div><div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-attend-call.png" alt="Attend this call modal" style="width:100%;display:block"></div><p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">"Attend this call" confirmation modal — the formal claim</p></div>
+        <div><div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/ecb/ecb-missed-calls.png" alt="Missed calls tab" style="width:100%;display:block"></div><p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Missed calls tab — every unanswered call logged and recoverable</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Ch 5 Outcome" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Five</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">What was delivered, and what's still open</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-left:3px solid #1E8A4A;border-radius:20px;padding:28px 30px"><p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1E8A4A">Shipped</p><p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">ECB module delivered end-to-end across the 200 km Gurgaon–Dausa stretch as part of the NHAI ATMS platform. Agent + supervisor views, live triage, fake-call audit, and ticket integration all in production scope.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-left:3px solid #E8490F;border-radius:20px;padding:28px 30px"><p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#E8490F">Still open</p><p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Post-launch operator adoption data and answer-time deltas. No direct feedback channel from control-room agents to the design team yet — flagged as a fix in the reflection below.</p></div>
+  </div>
+  <p style="margin:44px 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">What the module makes possible that wasn't possible before</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Full pre-pickup visibility</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Every ringing call's device ID and exact highway location visible before pickup — replacing a completely blind pickup workflow.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Zero unlogged calls</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Every call — answered or missed — tracked with a unique call ID and full detail page. Nothing disappears.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">One-screen dispatch</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Nearest emergency contacts and ADAS vehicles surface automatically by package. No manual lookup, no second coordination call.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Structured prank handling</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Agents close fake calls in one tap with an auto-generated audit record — a workflow that didn't exist before.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">05</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Dual role views</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Agents see personal workload. Supervisors see team-wide metrics and hourly call trends. Same platform, purpose-built per role.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">06</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Platform-consistent design language</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">The dual-role model, split-screen hierarchy, and information-first patterns established here became the reference the rest of the 10+ module ATMS platform inherited.</p></div>
+  </div>
+  <div style="margin:28px auto 0;max-width:720px;background:linear-gradient(115deg,#0B0B2E,#26265E);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">The qualitative shift that mattered</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">When the PM walked NHAI officials through the platform, the call detail screen — specifically the location map auto-populated before pickup — was the moment the room changed. A senior official asked how many ECBs could ring simultaneously and whether all of them would surface location. That question wasn't about metrics. It was about trust. <strong style="font-weight:600;color:#fff">A map that loads before an agent speaks is a different kind of system than one that asks a panicking caller where they are.</strong> That's the gap this closed.</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 6 Reflection" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Six</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">What I'd approach differently</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Get into the environment before the first wireframe.</strong> All early understanding came from the PRD and analogous research. A single shift in a real control room would have surfaced the noise, multi-screen reality, and parallel-call pressure much earlier — the split view was a late insight that should have been day one.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Be in the room when the client walkthrough happens.</strong> The handoff went to the PM, who walked NHAI officials through the product. Design rationale gets lost in translation. I'd push to be present at that walkthrough, or establish a feedback channel that routes responses directly to the design team.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Build the design system from day one on greenfield projects.</strong> Components were designed in phases across a large multi-module platform. Small inconsistencies in spacing, icon sizing, and border radii crept in and required a cleanup pass at the end.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Operational products are won on clarity, not craft.</strong> The decisions that determined success — what's visible before pickup, whether the map was readable at a glance, whether the interrupt was impossible to miss — were entirely about information hierarchy. Polish came second.</span></div>
+  </div>
+</section>
+
+<section data-screen-label="Ch 7 Platform Context" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Seven</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:26ch">The first module in a 10+ module platform — designing it first set the pattern for everything after</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:0 auto">
+    <p style="margin:0">The same control room that handled ECB calls also monitored live traffic, managed variable message signs, tracked vehicle speeds, and handled facility incidents — all through the same NHAI ATMS. Designing the ECB module first meant establishing the design language everything else inherited: the dual-role view model (agent vs. supervisor), the information hierarchy for time-critical workflows, and the split-screen pattern that puts all decision-critical content on one screen.</p>
+    <p style="margin:0"><strong style="color:#141311;font-weight:600">A note on the VIDS case study:</strong> VIDS (video incident detection) is the sibling module from this same platform, written up separately because the design problem is genuinely different — operator dashboards for continuous multi-stream alerts, not agent workflow for one-to-one emergency calls. Treat them as one engagement with two modules.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:40px">
+    <div style="background:#FFFFFF;border:1.5px solid #E8490F;border-radius:18px;padding:22px 24px"><p style="margin:0 0 6px;font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E8490F">This project</p><p style="margin:0 0 4px;font:700 16px 'Bricolage Grotesque',sans-serif">ECB Module</p><p style="margin:0;font:400 12.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Emergency call handling · 200 booths · agent + supervisor views</p></div>
+    <a href="VIDS%20Case%20Study.dc.html" style="text-decoration:none;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:22px 24px;display:block;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5);color:inherit"><p style="margin:0 0 6px;font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Sibling case study →</p><p style="margin:0 0 4px;font:700 16px 'Bricolage Grotesque',sans-serif">VIDS Module</p><p style="margin:0;font:400 12.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Video incident detection · operator monitoring dashboards · alerts + health hierarchy</p></a>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:22px 24px"><p style="margin:0 0 6px;font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Also on platform</p><p style="margin:0 0 4px;font:700 16px 'Bricolage Grotesque',sans-serif">Operations Layer</p><p style="margin:0;font:400 12.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Ticket management · Facility management · Variable messaging</p></div>
+  </div>
+  <div style="margin-top:28px;background:linear-gradient(115deg,#0B0B2E,#26265E);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:28px 32px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">What this phase taught me</p>
+    <p style="margin:0;font:400 15px/1.75 'Instrument Sans',sans-serif;color:rgba(255,255,255,.88)">Designing the ECB first — before any other module — meant every decision had to work without a reference point. That constraint turned out to be clarifying. It forced the dual-role view model, the split-screen hierarchy, and the information-first approach to become explicit, not implicit. Every module that came after had those principles baked in from day one, not retrofitted. Starting with the hardest, most human-facing piece of the platform was the right call.</p>
+  </div>
+</section>
+
+<section data-screen-label="Contact" style="padding:100px 14px 14px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="border-radius:28px;overflow:hidden;background:linear-gradient(120deg,#0B0B2E 0%,#C1330E 42%,#F4581C 68%,#1B1B4A 115%);padding:64px 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 45%">
+      <div>
+        <p style="margin:0 0 14px;font:600 14px 'Instrument Sans',sans-serif;color:#FFD9C2">See more work</p>
+        <h2 style="margin:0;font:800 clamp(40px,5.4vw,80px)/0.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:#fff">Next case study</h2>
+      </div>
+      <div>
+        <p style="margin:0 0 24px;font:400 15px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Raithu — offline, GPS-first plot mapping for field technicians in rural Mozambique, or head back to all projects.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <a href="Raithu%20Case%20Study.dc.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;background:#0C0B0A;color:#fff;font:600 14px 'Instrument Sans',sans-serif;padding:12px 12px 12px 22px;border-radius:999px;transition:transform .2s" style-hover="transform:scale(1.04);color:#fff">Raithu case study<span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#F4581C;font-size:13px">→</span></a>
+          <a href="index.html#work" style="text-decoration:none;display:flex;align-items:center;justify-content:center;font:600 14px 'Instrument Sans',sans-serif;border:1px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.15);color:#fff">All work</a>
+        </div>
+      </div>
+    </div>
+    <footer style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:26px 30px;font:500 13px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.55)">
+      <span>© 2026 Vidushi Maheshwari · Product Designer</span>
+      <span style="display:flex;gap:26px">
+        <a href="index.html" style="text-decoration:none">Home</a>
+        <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:none">Email</a>
+        <a href="https://www.linkedin.com/in/iamvidushi" style="text-decoration:none" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </footer>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F3F1EC;color:#141311;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{color:#FF6B2C}
+::selection{background:#F4581C;color:#0C0B0A}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+
+@media(max-width:860px){
+[style*="grid-template-columns: repeat(7,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(5,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(4,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(3,"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1.2fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 420px"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 1.3fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 120px 1fr"]{grid-template-columns:1fr!important;gap:4px!important}
+[style*="grid-template-columns: 44px 1.1fr 1.5fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 2.4fr"]{grid-template-columns:1.6fr .5fr 1fr!important}
+[style*="width: 56%"]{width:100%!important}
+[style*="mix-blend-mode: multiply"]{background:linear-gradient(0deg,rgba(20,6,1,.9) 6%,rgba(20,6,1,.5) 52%,rgba(20,6,1,.25))!important;mix-blend-mode:normal!important}
+nav[data-screen-label="Nav"]{flex-wrap:wrap!important;gap:10px!important;padding-left:18px!important;padding-right:18px!important}
+[style*="padding: 90px 44px"],[style*="padding: 110px 44px"],[style*="padding: 20px 44px"],[style*="padding: 26px 44px"],[style*="padding: 40px 44px"],[style*="padding: 36px 44px"],[style*="padding: 48px 44px"],[style*="padding: 0px 44px"],[style*="padding: 64px 56px"],[style*="padding: 80px 56px"],[style*="padding: 56px"],[style*="padding: 0px 30px"]{padding-left:20px!important;padding-right:20px!important}
+}
+</style>
+</helmet>
+
+<nav data-screen-label="Nav" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 30px;background:rgba(12,11,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)">
+  <a href="index.html" style="text-decoration:none;font:700 17px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#F5F3F0">vidushi<span style="color:#FF6B2C">.</span></a>
+  <div style="display:flex;align-items:center;gap:8px">
+    <a href="index.html#work" style="text-decoration:none;font:500 13.5px 'Instrument Sans',sans-serif;color:#F5F3F0;padding:9px 16px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.12);color:#fff">← All work</a>
+    <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:none;display:flex;align-items:center;gap:10px;background:#fff;color:#141311;font:600 13.5px 'Instrument Sans',sans-serif;padding:8px 8px 8px 18px;border-radius:999px;transition:transform .2s" style-hover="transform:scale(1.04);color:#141311">Get in touch<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#F4581C;color:#fff;font-size:13px">→</span></a>
+  </div>
+</nav>
+
+<div data-screen-label="Hero" style="padding:0">
+  <div style="position:relative;overflow:hidden;background:linear-gradient(115deg,#08201C 0%,#12403A 36%,#5A2A0C 70%,#E8490F 112%);padding:90px 44px 70px;text-align:center;animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both">
+    <p style="margin:0 0 18px;font:600 13px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#FFD9C2">NHAI VIDS</p>
+    <h1 style="margin:0 auto;font:800 clamp(40px,5.4vw,76px)/1.02 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;max-width:18ch;color:#F5F3F0">Real-time incident detection for a 200 km highway corridor</h1>
+    <p style="margin:26px auto 0;max-width:62ch;font:400 16px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">NHAI's ATMS platform needed a control room module to monitor AI-detected traffic incidents across multiple VIDS systems — in real time, under high-stress conditions, operated by teams with limited digital literacy.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:30px">
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">UX Design</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Dashboard Design</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Safety-Critical Systems</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Operational UX</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Government / B2G</span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:-40px auto 0;padding:0 30px;position:relative;z-index:5">
+  <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(20,19,17,.15);box-shadow:0 24px 60px rgba(20,19,17,.15)">
+    <img src="assets/vids-hero.png" alt="VIDS Dashboard Overview" style="width:100%;display:block">
+  </div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Video Incident Detection System — NHAI ATMS, Command Center 4, Delhi–Mumbai Expressway corridor</p>
+</div>
+
+<div style="max-width:900px;margin:70px auto 0;padding:0 30px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden">
+    <div style="padding:22px 24px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Role</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">UX Design — end-to-end · Research, IA, wireframes, visual design</p></div>
+    <div style="padding:22px 24px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Team</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">1 Sr. Designer · 1 PM · Development team</p></div>
+    <div style="padding:22px 24px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Client</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">NHAI — National Highways Authority of India · 2023</p></div>
+    <div style="padding:22px 24px"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Scope</p><p style="margin:0;font:600 14px/1.5 'Instrument Sans',sans-serif">Delhi–Mumbai Expressway · Gurgaon to Dausa · 200 km</p></div>
+  </div>
+
+  <div style="margin-top:28px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 18px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E8490F">The 30-second read</p>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Problem</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">AI cameras detecting incidents across 200 km of highway. No control-room interface for operators to interpret device health, alert volume, or shift-report data coherently.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Constraint</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">Sibling module to the NHAI ECB study — same platform, same 200 km scope, no direct operator access, 24/7 monitoring workflow with variable digital literacy.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Key decision</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">Rebuilt the dashboard around one filter — <em>does an operator need this before they act, or after they've decided to investigate?</em> System health moved to the top of the hierarchy. A silent alert queue on a system that's 30% offline is not good news.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">What shipped</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">VIDS module delivered as part of the NHAI ATMS platform — dashboard with health-first hierarchy, unified device detail panel (3 cameras + radar + LPU), spatial highway map, and traffic + incident trend charts.</span></div>
+    </div>
+  </div>
+</div>
+
+<section data-screen-label="Ch 1 Background" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter One</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:26ch">AI cameras watching 200 km of highway. No structured system to act on what they were seeing.</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:0 auto">
+    <p style="margin:0">The same ATMS platform that digitised the Emergency Control Box workflow also covered video incident detection. Each VIDS device is a cluster mounted on a single pole: three cameras covering three directions, one radar, and one LPU (Local Processing Unit) handling edge-level detection before sending data to the control room. The cameras were doing the detection. What was missing was a control room interface capable of making sense of what they were seeing.</p>
+    <p style="margin:0">Control room operators — working 24/7 shifts — had no structured view of device health, incident volume per location, or live alert status across the corridor. Their job: monitor the dashboard, track incident counts per device and package, keep a live check on ongoing tickets and critical alerts, and compile reports for higher officials. Without a coherent interface, that job came down to memory and manual checking.</p>
+  </div>
+  <div style="margin:44px auto 0">
+    <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">For the first time, operators needed to —</p>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">See which VIDS devices were operational at the start of every shift — <strong style="color:#141311;font-weight:600">before trusting any of their detection outputs</strong></span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Drill into any device and see its three camera feeds, radar, and LPU status together — not as separate systems</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Track incident counts from specific devices within a package to identify where problems were clustering</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Keep a live view of current incidents, ongoing tickets, and critical alerts without switching screens</span></div>
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:18px 24px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">05</span><span style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Have enough structured data to compile shift reports for higher officials</span></div>
+    </div>
+  </div>
+  <div style="margin:40px auto 0;max-width:720px;background:linear-gradient(115deg,#08201C,#164A42);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">The goal</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Design the VIDS module for NHAI's ATMS platform — a single interface to monitor device health, track incident counts by device and package, stay across open tickets, and generate the data operators needed to report upward. <strong style="font-weight:600;color:#fff">The whole system had to be readable at a shift glance, not investigated piece by piece.</strong></p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 2 Research" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Two</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">Designing for operators who think in km markers — not camera IDs</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">PRD deep-dive</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">6 incident detection types, device architecture per pole (3 cameras + radar + LPU), package groupings, alert severity levels, and the control room's monitoring + reporting scope</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">Competitive benchmarking</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Logipix HIGS for spatial orientation via reference-point maps; Vehant VIDS/VSDS for co-presenting multi-sensor data in a single incident view</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">Heuristic evaluation</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Adapted for safety-critical control rooms — visual salience, spatial mental model alignment, and cognitive load reduction couldn't be traded off against each other</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:20px 20px"><p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</p><p style="margin:0 0 6px;font:700 14.5px 'Bricolage Grotesque',sans-serif">Operator context mapping</p><p style="margin:0;font:400 12.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Who was in the control room, what their shift looked like, and what "done" meant — monitoring and reporting upward, not incident dispatch</p></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:44px auto 0">
+    <p style="margin:0">The most important research finding wasn't about features — it was about mental models. <strong style="color:#141311;font-weight:600">Operators don't think in camera IDs or VIDS numbers. They think in km markers, directions, and package locations</strong> — the same spatial logic they use when coordinating with patrol on the ground. A system that displayed incidents as "VIDS783 — Camera 2" was structurally wrong for the people using it, regardless of how well the detection worked.</p>
+    <p style="margin:0">That finding shaped three decisions: alert cards use plain-language package locations, the device detail panel names feeds by direction (East / South / West) — not camera number, and the map renders the corridor as a road layout anchored to package locations, so operators orient spatially the same way they'd talk about the highway in person.</p>
+  </div>
+
+  <div style="margin:44px auto 0">
+    <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">Control room journey — a shift in the life of a VIDS operator</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;overflow:hidden">
+      <div style="padding:18px 16px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">01</p><p style="margin:0;font:500 13px/1.45 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Checks VIDS device health across the corridor</p></div>
+      <div style="padding:18px 16px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">02</p><p style="margin:0;font:500 13px/1.45 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Drills into device detail — camera feeds, radar, LPU status</p></div>
+      <div style="padding:18px 16px"><p style="margin:0 0 4px;font:700 10px 'Instrument Sans',sans-serif;color:#E8490F">03</p><p style="margin:0;font:500 13px/1.45 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Tracks incident counts per device per package · monitors live alerts, tickets, critical events</p></div>
+    </div>
+    <p style="margin:12px auto 0;max-width:66ch;text-align:center;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.55)">The output of this shift: a structured report for higher officials — incident volumes by location, device health status, alert history. The dashboard had to make that data readable without manual aggregation.</p>
+  </div>
+
+  <div style="margin:28px auto 0;max-width:720px;background:linear-gradient(115deg,#08201C,#164A42);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">A thing I got wrong early</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">My initial framing treated the alert queue as the core of the operator's job — as if the primary task was responding to individual incidents in real time. It isn't. <strong style="font-weight:600;color:#fff">The primary task is monitoring across the shift and building a picture accurate enough to report upward.</strong> That changes what the dashboard prioritises: not just the loudest alert, but a clear read on incident counts, ticket status, and whether the devices generating those counts are actually healthy. I reframed the whole information hierarchy around that job.</p>
+  </div>
+</section>
+
+<div style="max-width:1100px;margin:50px auto 0;padding:0 30px">
+  <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(20,19,17,.15);box-shadow:0 16px 44px rgba(20,19,17,.12)">
+    <img src="assets/vids-device-table.png" alt="Device Details Table" style="width:100%;display:block">
+  </div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Device Details view — VIDS number, location, individual device health status per camera and LPU</p>
+</div>
+
+<section data-screen-label="Ch 3 Dashboard Hierarchy" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Three</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">Deciding what the dashboard shows — and in what order</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:0 auto 40px">
+    <p style="margin:0">The PRD specified the data the system could expose. The design question was which of that data earned permanent, always-visible real estate — and which belonged one level deeper. The answer came from a single question for each data type: <strong style="color:#141311;font-weight:600">does an operator need this before they can act, or after they've already decided to investigate?</strong></p>
+    <p style="margin:0">Anything that answered "before" went on the dashboard. Anything "after" went inside the device detail panel. That filter produced four dashboard-level data types with a specific vertical order — plus one platform-provided surface held in the persistent right panel.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:grid;grid-template-columns:44px 1fr;gap:18px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</span><span><p style="margin:0 0 2px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">First — System health</p><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">Can I trust what this dashboard is showing me?</p><p style="margin:0 0 8px;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">If VIDS systems are offline, every gap in incident detection from those zones is a false negative — not a quiet highway. Health had to be the first thing visible on every session, without a click.</p><p style="margin:0;font:600 12px 'Instrument Sans',sans-serif;color:#B26A00">Rendered as: operational/total donut + device list with online/offline status per VIDS ID</p></span></div>
+    <div style="display:grid;grid-template-columns:44px 1fr;gap:18px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</span><span><p style="margin:0 0 2px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Second — Live vehicle volume</p><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">What's the baseline load on the highway right now?</p><p style="margin:0 0 8px;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Volume by vehicle type sets the interpretive context for incident rates. 20,000 vehicles with a high truck share is a different risk exposure than 20,000 mostly cars. Operators needed this before looking at incident counts.</p><p style="margin:0;font:600 12px 'Instrument Sans',sans-serif;color:#B26A00">Rendered as: vehicle trend donut — All / Car / Bus / Truck · total count at centre</p></span></div>
+    <div style="display:grid;grid-template-columns:44px 1fr;gap:18px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</span><span><p style="margin:0 0 2px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Third — Traffic trends by location</p><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">Where on the highway is volume anomalous?</p><p style="margin:0 0 8px;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">A spike that happens at the same location every day at the same hour is a road design issue. A spike that's never appeared before is an active incident. That distinction changes the response — the 12-hour line chart makes it visible.</p><p style="margin:0;font:600 12px 'Instrument Sans',sans-serif;color:#B26A00">Rendered as: multi-line chart — X-axis: VIDS location · Y-axis: traffic count · last 12 hours</p></span></div>
+    <div style="display:grid;grid-template-columns:44px 1fr;gap:18px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</span><span><p style="margin:0 0 2px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Fourth — Incident trends by type</p><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">What kind of incidents are clustering, and where?</p><p style="margin:0 0 8px;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Incident count by type distinguishes operational load from safety risk. 150 congestion incidents and 0 wrong-direction incidents is a different operational picture than one generating both — visible at dashboard level, no drill-down required.</p><p style="margin:0;font:600 12px 'Instrument Sans',sans-serif;color:#B26A00">Rendered as: multi-line chart — 6 incident types · X-axis: VIDS location · last 12 hours</p></span></div>
+    <div style="display:grid;grid-template-columns:44px 1fr;gap:18px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">05</span><span><p style="margin:0 0 2px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Persistent right panel — Platform alert queue</p><p style="margin:0 0 6px;font:700 16px 'Bricolage Grotesque',sans-serif">Where the platform's alert queue sits in the VIDS view</p><p style="margin:0 0 8px;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">The alert queue is a platform-wide surface, not something built for VIDS. What was in scope was <em>where</em> it sat: the persistent right panel keeps it visible everywhere without competing with the health, incident, and spatial context doing the interpretive work.</p><p style="margin:0;font:600 12px 'Instrument Sans',sans-serif;color:#B26A00">Rendered as: persistent right-side panel — platform-provided widget, positioned within the VIDS layout</p></span></div>
+  </div>
+  <div style="margin:28px auto 0;max-width:720px;background:linear-gradient(115deg,#08201C,#164A42);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">The decision that wasn't obvious</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">The first version put the alert queue at the top — it's what operators act on most urgently. But an operator can't correctly interpret a quiet alert queue if they don't know whether the systems generating the incidents behind it are running. <strong style="font-weight:600;color:#fff">A silent alert queue on a system that's 30% offline is not good news — it's a blind spot.</strong> Health had to come first.</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 4 Solution" style="max-width:1100px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 50px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Four</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">Four features, each mapped to a gap in the operator workflow</h2>
+    <p style="margin:22px auto 0;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:64ch">Every decision was traceable to a specific failure mode in the existing workflow. The target user set the constraints: operators working long shifts, under stress, with variable network reliability and limited training time.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 01 · VIDS Health Dashboard</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">Know what's working before you trust what it's reporting</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">The dashboard opens on a system health view: a donut indicator shows how many VIDS systems are operational alongside a device list grouped by VIDS ID. Each device's online/offline status is visible at a glance, alongside vehicle trend data across all active systems.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(20,19,17,.12);padding-top:16px">
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Donut indicator shows operational vs. total VIDS count — a single number that tells operators what to trust before the shift starts.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Device list groups each VIDS ID with its package location and live status — no manual health check required.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Vehicle trend donut (All / Car / Bus / Truck) gives a real-time volume snapshot across the full corridor.</p>
+        </div>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/vids-health.png" alt="VIDS Health Dashboard" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">VIDS Systems Health — operational count donut · Vehicle trends last 12 hours</p>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 02 · Traffic &amp; Incident Trend Charts</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">See the pattern before it becomes a crisis</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Two real-time line charts — traffic volume by vehicle type and incident counts by type — track data across all VIDS locations over the last 12 hours. Operators can identify which package is generating disproportionate incidents and contextualise a single alert within the broader trend without leaving the dashboard — exactly the kind of pattern that needs to land in the shift report.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(20,19,17,.12);padding-top:16px">
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Traffic trends: All / Car / Bus / Truck across VIDS locations — volume distribution and anomalies against baseline.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Incidents recorded: Wrong Direction / Traffic / Slow Moving / Fallen Object / Congestion / Stopped Vehicle — where incident types are clustering.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Time window dropdown (Last 12 hours) shifts the view without navigating away from the overview.</p>
+        </div>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/vids-trends.png" alt="Traffic & Incident Trend Charts" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Traffic trends and incidents recorded — by VIDS location, last 12 hours</p>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 03 · Device Detail Panel</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">All five components of a VIDS pole — visible together in one panel</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Clicking a device opens a detail panel showing the full pole cluster together — online status, plain-language location, camera thumbnails per direction, LPU health, and a live table of passing vehicles with type and timestamp. Operators assess the full health of a device and the activity it's seeing without opening a separate screen for each component.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(20,19,17,.12);padding-top:16px">
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Three directional camera feeds (East / South / West) in one panel — full spatial coverage of the pole, no view switching.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>LPU health (Working fine / Unhealthy) at device level — if the LPU is unhealthy, its detections can't be trusted; operators know before including that device's data in a report.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Live passing vehicle log (vehicle type + timestamp, LIVE indicator) — the data source operators use when tracking counts for shift reports.</p>
+        </div>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/vids-device-detail.png" alt="Device Detail Panel" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">VIDS 34 detail — 3-direction cameras · radar · LPU status · live passing vehicle log</p>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:40px 44px 34px;max-width:860px">
+        <p style="margin:0;font:800 14px 'Bricolage Grotesque',sans-serif;color:#E8490F">Feature 04 · Highway Map View</p>
+        <h3 style="margin:0;font:700 24px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">Spatial orientation — where on the highway, not just which camera</h3>
+        <p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">A toggle switches the VIDS Devices section from list view to a highway map: the corridor rendered as a road layout — LHS and RHS lanes — with VIDS positions plotted at their actual package locations. Green and red dot indicators show device health at a glance, so operators can see which package is affected and whether the surrounding devices are operational.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(20,19,17,.12);padding-top:16px">
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Highway layout (LHS / RHS) mirrors the spatial logic operators already use — km-based, directional, anchored to package references, not abstract camera IDs.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>Package groupings (Package 44 Tonk, Package 45 Brijlaalpura) give incidents geographic context.</p>
+          <p style="margin:0;display:flex;gap:10px;font:400 13px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#F4581C;margin-top:7px"></span>List / Map toggle shifts between data detail and spatial overview without a separate navigation path.</p>
+        </div>
+      </div>
+      <div style="padding:0 44px 40px">
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,19,17,.12)"><img src="assets/vids-map.png" alt="Highway Map View" style="width:100%;display:block"></div>
+        <p style="margin:10px 0 0;font:400 12px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Map view — VIDS positions along LHS/RHS corridor · Package 44 &amp; 45 · health indicators</p>
+        <p style="margin:8px 0 0;font:italic 400 11.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">Note on identifiers: package numbers and location labels shown throughout this study are illustrative placeholders, not the actual package numbers marked on the highway. The design pattern is real; the identifiers are anonymised.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Ch 5 Outcome" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Five</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">What the dashboard hierarchy made possible — and what's still open</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-left:3px solid #1E8A4A;border-radius:20px;padding:28px 30px"><p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1E8A4A">Shipped</p><p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">VIDS module delivered end-to-end as part of the NHAI ATMS platform — health-first hierarchy, incident and traffic trend charts, unified device detail panel, and highway map view all in production scope.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-left:3px solid #E8490F;border-radius:20px;padding:28px 30px"><p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#E8490F">Still open</p><p style="margin:0;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Operator-side validation. Internal walkthrough only — no real operator sessions. The hierarchy is defensible on reasoning; the ergonomic proof is the next chapter, and it's what I'd fix first.</p></div>
+  </div>
+  <p style="margin:40px auto 0;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">Before the VIDS module, device health was checked separately, incident counts required manual aggregation across logs, and there was no way to see the full corridor spatially. Shift reports were built from memory and manual cross-referencing. This interface replaced that process.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Device health readable at shift start</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Operators could see which devices were operational before relying on their outputs — gaps in incident data could be explained, not misread as a quiet corridor.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Incident counts per device, per package</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">The dashboard surfaced how many incidents each device within a package had recorded — the structured data operators needed to track patterns and compile reports.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Full pole detail in one panel</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">All five components — three directional cameras, radar, and LPU — together. Operators assessed the whole pole without switching between views.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Live vehicle data for real-time tracking</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">The live passing vehicle log gave a timestamped record of activity per device — the ground-level data that fed into shift reports for higher officials.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:26px 28px;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5)"><p style="margin:0 0 10px;font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">05</p><h3 style="margin:0 0 8px;font:700 17px/1.25 'Bricolage Grotesque',sans-serif">Spatial view of the corridor</h3><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">The map view placed devices in their actual highway positions by package — operators could see where incident clusters were forming, not just which device ID was flagging.</p></div>
+  </div>
+  <div style="margin:28px auto 0;max-width:720px;background:linear-gradient(115deg,#08201C,#164A42);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">Internal walkthrough — what it revealed</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">During the walkthrough, the PM clicked through the East, South, and West camera feeds. A senior stakeholder immediately asked: <strong style="font-weight:600;color:#fff">"what happens when LPU is unhealthy?"</strong> Asked unprompted in the first five minutes, that meant the primary flow had landed clearly enough that stakeholders had moved on to edge cases. It also surfaced a gap: unhealthy-state UI for individual pole components needed a more explicit pass — something a real operator session would have caught. The absence of one is the thing I'd change first.</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 6 Reflection" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Six</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:24ch">What I'd approach differently</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Design the output before designing the interface.</strong> The operator's real job was producing shift reports — but the report format was never defined in the brief. If the report template had been defined first, the dashboard hierarchy would have been easier to justify: every data type that needed to land in the report earned real estate; everything else went in the drill-down.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Design the false positive feedback loop on day one.</strong> Rural highways generate high false positive rates — animals, tractors, dust, shadows. "Mark as false alert" with structured reason codes was in scope, but the feedback mechanism that would tune the AI detection over time was deferred. It should have been core to the initial design.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Push harder for Hindi labels in the operator interface.</strong> The PRD was in English; the interface was designed in English. But the operators using it every day were more comfortable in Hindi — particularly under stress. Language was treated as a localisation concern rather than a core usability one. I'd challenge that earlier and more forcefully.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Map view mental model needed local landmarks, not package IDs.</strong> Operators on the ground navigate by km markers, village names, and landmarks. Package IDs were an internal taxonomy — not the one operators would use to communicate incident locations to patrol. That gap should have been caught in research.</span></div>
+  </div>
+</section>
+
+<section data-screen-label="Ch 7 Platform Context" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Seven</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:28ch">One module in a 10+ module platform — its device patterns influenced every module that followed</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch;margin:0 auto">
+    <p style="margin:0">VIDS sat inside the same ATMS platform as the ECB emergency call system — Command Center 4, covering the 200 km Gurgaon–Dausa stretch. Operators moved between modules in a single session: ECB for emergency calls, VIDS for incident detection, VSDS for speed violations, TMCS for traffic flow, Ticket Management for response tracking. The device detail panel pattern established here became a reusable structure across the platform — the same information-first, health-visible-first hierarchy carried into other module surfaces.</p>
+    <p style="margin:0"><strong style="color:#141311;font-weight:600">A note on the ECB case study:</strong> ECB is the sibling module from this same engagement, written up separately because the design problem is genuinely different — agent workflow for one-to-one emergency calls, not operator dashboards for continuous multi-stream monitoring. Treat them as one engagement with two modules. ECB set the platform's design vocabulary; VIDS extended it into the monitoring surface.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:40px">
+    <div style="background:#FFFFFF;border:1.5px solid #E8490F;border-radius:18px;padding:22px 24px"><p style="margin:0 0 6px;font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E8490F">This project</p><p style="margin:0 0 4px;font:700 16px 'Bricolage Grotesque',sans-serif">VIDS Module</p><p style="margin:0;font:400 12.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">AI incident detection · multiple VIDS systems · single unified interface</p></div>
+    <a href="ECB%20Case%20Study.dc.html" style="text-decoration:none;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:22px 24px;display:block;transition:border-color .3s" style-hover="border-color:rgba(255,107,44,.5);color:inherit"><p style="margin:0 0 6px;font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Sibling case study →</p><p style="margin:0 0 4px;font:700 16px 'Bricolage Grotesque',sans-serif">ECB Module</p><p style="margin:0;font:400 12.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Emergency call handling · agent + supervisor views · sets platform-wide design vocabulary</p></a>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:22px 24px"><p style="margin:0 0 6px;font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(20,19,17,.5)">Also on platform</p><p style="margin:0 0 4px;font:700 16px 'Bricolage Grotesque',sans-serif">Operations Layer</p><p style="margin:0;font:400 12.5px/1.55 'Instrument Sans',sans-serif;color:rgba(20,19,17,.66)">Ticket management · Facility management · Virtual messaging system</p></div>
+  </div>
+  <div style="margin-top:28px;background:linear-gradient(115deg,#08201C,#164A42);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:28px 32px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">What this phase taught me</p>
+    <p style="margin:0;font:400 15px/1.75 'Instrument Sans',sans-serif;color:rgba(255,255,255,.88)">Designing for safety-critical operational environments is fundamentally different from designing for task completion. The question isn't "can the user find what they need?" — it's "will the user see what matters most when they're under the most pressure?" Health-first hierarchy, spatial mental model alignment, and one-screen incident resolution weren't nice-to-haves. They were the only choices that made sense for operators working 12-hour shifts watching a highway that doesn't pause.</p>
+  </div>
+</section>
+
+<section data-screen-label="Contact" style="padding:100px 14px 14px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="border-radius:28px;overflow:hidden;background:linear-gradient(120deg,#08201C 0%,#C1330E 42%,#F4581C 68%,#12403A 115%);padding:64px 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 45%">
+      <div>
+        <p style="margin:0 0 14px;font:600 14px 'Instrument Sans',sans-serif;color:#FFD9C2">See more work</p>
+        <h2 style="margin:0;font:800 clamp(40px,5.4vw,80px)/0.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:#fff">Next case study</h2>
+      </div>
+      <div>
+        <p style="margin:0 0 24px;font:400 15px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">NHAI Emergency Control Box — the sibling module that set the platform's design vocabulary, or head back to all projects.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <a href="ECB%20Case%20Study.dc.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;background:#0C0B0A;color:#fff;font:600 14px 'Instrument Sans',sans-serif;padding:12px 12px 12px 22px;border-radius:999px;transition:transform .2s" style-hover="transform:scale(1.04);color:#fff">ECB case study<span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#F4581C;font-size:13px">→</span></a>
+          <a href="index.html#work" style="text-decoration:none;display:flex;align-items:center;justify-content:center;font:600 14px 'Instrument Sans',sans-serif;border:1px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.15);color:#fff">All work</a>
+        </div>
+      </div>
+    </div>
+    <footer style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:26px 30px;font:500 13px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.55)">
+      <span>© 2026 Vidushi Maheshwari · Product Designer</span>
+      <span style="display:flex;gap:26px">
+        <a href="index.html" style="text-decoration:none">Home</a>
+        <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:none">Email</a>
+        <a href="https://www.linkedin.com/in/iamvidushi" style="text-decoration:none" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </footer>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

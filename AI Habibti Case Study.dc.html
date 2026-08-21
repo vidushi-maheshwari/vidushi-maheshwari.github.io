@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F3F1EC;color:#141311;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{color:#FF6B2C}
+::selection{background:#F4581C;color:#0C0B0A}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+
+@media(max-width:860px){
+[style*="grid-template-columns: repeat(7,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(5,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(4,"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns: repeat(3,"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1.2fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1.15fr 1fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 420px"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 1fr 1.3fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 120px 1fr"]{grid-template-columns:1fr!important;gap:4px!important}
+[style*="grid-template-columns: 44px 1.1fr 1.5fr"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns: 2.4fr"]{grid-template-columns:1.6fr .5fr 1fr!important}
+[style*="width: 56%"]{width:100%!important}
+[style*="mix-blend-mode: multiply"]{background:linear-gradient(0deg,rgba(20,6,1,.9) 6%,rgba(20,6,1,.5) 52%,rgba(20,6,1,.25))!important;mix-blend-mode:normal!important}
+nav[data-screen-label="Nav"]{flex-wrap:wrap!important;gap:10px!important;padding-left:18px!important;padding-right:18px!important}
+[style*="padding: 90px 44px"],[style*="padding: 110px 44px"],[style*="padding: 20px 44px"],[style*="padding: 26px 44px"],[style*="padding: 40px 44px"],[style*="padding: 36px 44px"],[style*="padding: 48px 44px"],[style*="padding: 0px 44px"],[style*="padding: 64px 56px"],[style*="padding: 80px 56px"],[style*="padding: 56px"],[style*="padding: 0px 30px"]{padding-left:20px!important;padding-right:20px!important}
+}
+</style>
+</helmet>
+
+<nav data-screen-label="Nav" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 30px;background:rgba(12,11,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)">
+  <a href="index.html" style="text-decoration:none;font:700 17px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#F5F3F0">vidushi<span style="color:#FF6B2C">.</span></a>
+  <div style="display:flex;align-items:center;gap:8px">
+    <a href="index.html#work" style="text-decoration:none;font:500 13.5px 'Instrument Sans',sans-serif;color:#F5F3F0;padding:9px 16px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.12);color:#fff">← All work</a>
+    <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:none;display:flex;align-items:center;gap:10px;background:#fff;color:#141311;font:600 13.5px 'Instrument Sans',sans-serif;padding:8px 8px 8px 18px;border-radius:999px;transition:transform .2s" style-hover="transform:scale(1.04);color:#141311">Get in touch<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#F4581C;color:#fff;font-size:13px">→</span></a>
+  </div>
+</nav>
+
+<div data-screen-label="Hero" style="padding:0">
+  <div style="position:relative;overflow:hidden;background:linear-gradient(115deg,#2A0E24 0%,#6B1E45 34%,#B8321C 74%,#F4581C 114%);padding:90px 44px 70px;text-align:center;animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both">
+    <p style="margin:0 0 18px;font:600 13px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#FFD9C2">Your AI Habibti</p>
+    <h1 style="margin:0 auto;font:800 clamp(40px,5.4vw,76px)/1.02 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;max-width:18ch;color:#F5F3F0">A culturally fluent AI lifestyle ecosystem, sequenced by what earns trust first</h1>
+    <p style="margin:26px auto 0;max-width:64ch;font:400 16px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Designing a lifestyle AI assistant for Arab, Desi, and global women — where the hard question wasn't what to build, but what earns permission first. Eight candidate modules, narrowed to a four-module MVP. Closet wins the door; Soft Structure wins the week.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:30px">
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">UX Design</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Cultural Design</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Consumer AI</span>
+      <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#F5F3F0">Solo Designer</span>
+      <span style="font:600 12px 'Instrument Sans',sans-serif;background:rgba(244,88,28,.28);border:1px solid rgba(255,107,44,.55);border-radius:999px;padding:7px 15px;backdrop-filter:blur(6px);color:#FFD9C2">Executed with AI</span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:-40px auto 0;padding:0 30px;position:relative;z-index:5">
+  <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(20,19,17,.15);box-shadow:0 24px 60px rgba(20,19,17,.15)">
+    <img src="assets/habibti/img1.png" alt="Your AI Habibti — four module screens: Home, Soft Structure, Luxury Living, and Closet Concierge" style="width:100%;height:auto;display:block" />
+  </div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Four modules, one home base — Home, Soft Structure, Luxury Living, and Closet Concierge</p>
+</div>
+
+<div style="max-width:1000px;margin:70px auto 0;padding:0 30px">
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden">
+    <div style="padding:22px 20px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.5)">Role</p><p style="margin:0;font:600 13.5px/1.5 'Instrument Sans',sans-serif">Sole UX Designer</p></div>
+    <div style="padding:22px 20px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.5)">Team</p><p style="margin:0;font:600 13.5px/1.5 'Instrument Sans',sans-serif">PM · Tech · UX Writer</p></div>
+    <div style="padding:22px 20px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.5)">Client</p><p style="margin:0;font:600 13.5px/1.5 'Instrument Sans',sans-serif">Dubai-based startup</p></div>
+    <div style="padding:22px 20px;border-right:1px solid rgba(20,19,17,.1)"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.5)">Status</p><p style="margin:0;font:600 13.5px/1.5 'Instrument Sans',sans-serif">MVP in development (pre-beta)</p></div>
+    <div style="padding:22px 20px"><p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.5)">Scope</p><p style="margin:0;font:600 13.5px/1.5 'Instrument Sans',sans-serif">Research synthesis · MVP scoping · Journeys · Flows · System design</p></div>
+  </div>
+
+  <div style="margin-top:28px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 18px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E8490F">The 30-second read</p>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Problem</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">Design an AI lifestyle assistant where the hard question was sequencing — which module earns permission first — not feature scope.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,19,17,.1)"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Key decision</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">Forced trade-off testing across 8 potential modules → MVP narrowed to 4. Closet wins the door; Soft Structure wins the week.</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 0"><span style="font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,19,17,.55);padding-top:3px">Delivered</span><span style="font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.78)">4-module MVP system, personalised onboarding, backend journeys, and user flows — currently under development.</span></div>
+    </div>
+  </div>
+</div>
+
+<section data-screen-label="Framing quote" style="max-width:900px;margin:70px auto 0;padding:0 30px">
+  <div style="background:linear-gradient(115deg,#2A0E24,#6B1E45);border:1px solid rgba(255,107,44,.35);border-radius:24px;padding:48px 44px;text-align:center;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <p style="margin:0 auto;max-width:40ch;font:600 clamp(20px,2.5vw,28px)/1.4 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#fff">"Most AI assistants optimize for efficiency. Habibti optimizes for something harder: trust — cultural fluency, emotional resonance, and clarity without harshness."</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 1 The problem" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter One</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:22ch">What women were actually carrying</h2>
+    <p style="margin:16px 0 0;font:400 15.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.6)">Not a productivity problem. An orchestration problem.</p>
+  </div>
+  <p style="margin:0 auto;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">The primary research was commissioned by the client and fielded by a specialist agency panel — a structured survey of 2,000 women across MENA, South Asia, and the diaspora. I designed the module-prioritization instrument that ran inside that survey and synthesized the full dataset into the MVP scope and sequencing decisions.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px"><p style="margin:0 0 8px;font:800 clamp(28px,3vw,38px) 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#E8490F">85.3%</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Said current lifestyle tech doesn't fit how they live — not because the tools are bad, but because they were built for someone else.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px"><p style="margin:0 0 8px;font:800 clamp(28px,3vw,38px) 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#E8490F">79.1%</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Wanted help with errands, to-dos, and plans — but had no clear system to hold it all.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px"><p style="margin:0 0 8px;font:800 clamp(28px,3vw,38px) 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#E8490F">72.8%</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Repeatedly faced "What do I wear for this?" as a high-frequency decision they needed help with.</p></div>
+  </div>
+
+  <div style="margin:44px auto 0;background:linear-gradient(115deg,#2A0E24,#6B1E45);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:26px 30px;max-width:720px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">The invisible second shift</p>
+    <p style="margin:0;font:400 14.5px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Women globally spend approximately 2.8 more hours per day than men on unpaid care and domestic work (UN Women). <strong style="font-weight:600;color:#fff">A neutral, task-only tool will always feel insufficient — because the job isn't tasks. It's orchestration.</strong></p>
+  </div>
+
+  <h3 style="margin:48px 0 6px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">Why this market, why now</h3>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 24px"><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Middle East travel market hit $101.2B gross bookings in 2024, with online penetration continuing to grow.</p><p style="margin:12px 0 0;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.45)">Phocuswright</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 24px"><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Women's apparel in Middle East &amp; Africa projected to exceed $88B by 2029 — modest fashion and cultural preferences explicitly cited as drivers.</p><p style="margin:12px 0 0;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.45)">Research and Markets</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 24px"><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72)">Internet penetration in Saudi Arabia at ~99% (2024) — mobile-first lifestyle products are default behaviour, not aspirational.</p><p style="margin:12px 0 0;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.45)">DataReportal</p></div>
+  </div>
+
+  <h3 style="margin:48px 0 6px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">What existing tools miss — specifically</h3>
+  <p style="margin:0 auto 22px;font:400 15px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.6);text-align:center">The gap isn't a missing feature. It's a missing frame.</p>
+  <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;overflow:hidden;overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font:400 13px 'Instrument Sans',sans-serif;min-width:640px">
+      <thead>
+        <tr style="background:#F3F1EC">
+          <th style="text-align:left;padding:14px 18px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.6);border-bottom:1px solid rgba(20,19,17,.12)">Dimension</th>
+          <th style="text-align:center;padding:14px 12px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:rgba(20,19,17,.5);border-bottom:1px solid rgba(20,19,17,.12)">Google / Outlook</th>
+          <th style="text-align:center;padding:14px 12px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:rgba(20,19,17,.5);border-bottom:1px solid rgba(20,19,17,.12)">Habitica / Streaks</th>
+          <th style="text-align:center;padding:14px 12px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:rgba(20,19,17,.5);border-bottom:1px solid rgba(20,19,17,.12)">Notion / Todoist</th>
+          <th style="text-align:center;padding:14px 12px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:rgba(20,19,17,.5);border-bottom:1px solid rgba(20,19,17,.12)">Generic AI</th>
+          <th style="text-align:center;padding:14px 12px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#E8490F;border-bottom:1px solid rgba(20,19,17,.12);background:rgba(244,88,28,.06)">Habibti</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:13px 18px;font:500 13px 'Instrument Sans',sans-serif;color:#141311;border-bottom:1px solid rgba(20,19,17,.08)">Cultural calendar (prayer, Hijri, Ramadan)</td>
+          <td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;font-weight:600;color:#1E8A4A;border-bottom:1px solid rgba(20,19,17,.08);background:rgba(244,88,28,.04)">✓</td>
+        </tr>
+        <tr>
+          <td style="padding:13px 18px;font:500 13px 'Instrument Sans',sans-serif;color:#141311;border-bottom:1px solid rgba(20,19,17,.08)">Shame-free, additive tone</td>
+          <td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.5);border-bottom:1px solid rgba(20,19,17,.08)">partial</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.5);border-bottom:1px solid rgba(20,19,17,.08)">partial</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;font-weight:600;color:#1E8A4A;border-bottom:1px solid rgba(20,19,17,.08);background:rgba(244,88,28,.04)">✓</td>
+        </tr>
+        <tr>
+          <td style="padding:13px 18px;font:500 13px 'Instrument Sans',sans-serif;color:#141311;border-bottom:1px solid rgba(20,19,17,.08)">Decision load reduction</td>
+          <td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;font-weight:600;color:#1E8A4A;border-bottom:1px solid rgba(20,19,17,.08);background:rgba(244,88,28,.04)">✓</td>
+        </tr>
+        <tr>
+          <td style="padding:13px 18px;font:500 13px 'Instrument Sans',sans-serif;color:#141311;border-bottom:1px solid rgba(20,19,17,.08)">Identity-aware guidance</td>
+          <td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35);border-bottom:1px solid rgba(20,19,17,.08)">✗</td><td style="text-align:center;padding:13px 12px;font-weight:600;color:#1E8A4A;border-bottom:1px solid rgba(20,19,17,.08);background:rgba(244,88,28,.04)">✓</td>
+        </tr>
+        <tr>
+          <td style="padding:13px 18px;font:500 13px 'Instrument Sans',sans-serif;color:#141311">Trust-gated community</td>
+          <td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35)">✗</td><td style="text-align:center;padding:13px 12px;color:rgba(20,19,17,.35)">✗</td><td style="text-align:center;padding:13px 12px;font-weight:600;color:#1E8A4A;background:rgba(244,88,28,.04)">✓ designed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin:20px auto 0;font:400 15px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">No existing tool covers all five; most cover one. The competitive gap isn't features — it's framing. General AI is powerful but culturally generic; productivity planners optimize schedules but not identity-led decision load; niche apps solve a slice, not the ecosystem. <strong style="color:#141311;font-weight:600">Habibti's wedge is better defaults and better trust design — not better AI.</strong></p>
+</section>
+
+<section data-screen-label="Ch 2 Personas" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Two</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:20ch">The three personas that drove design decisions</h2>
+  </div>
+  <p style="margin:0 auto 32px;font:400 15.5px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">These aren't marketing profiles. They're interface routing decisions — they change what gets foregrounded, how suggestions are phrased, and what counts as "done."</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px">
+      <p style="margin:0 0 2px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">Layla</p>
+      <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#E8490F">Fashion Curator</p>
+      <p style="margin:0 0 14px;padding-left:14px;border-left:2px solid #F0C9BC;font:italic 400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">"I know my style. I just need help executing it — fast, and for the right occasion."</p>
+      <p style="margin:0;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Closet as default first door. Wardrobe upload as first-session priority. 2–3 options, not a grid. Pre-loaded prompt chips.</p>
+      <span style="display:inline-block;margin-top:14px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;color:#5E7A5E;border:1px solid #A9BBA9;border-radius:6px;padding:4px 8px">SDT · Relatedness HIGH</span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px">
+      <p style="margin:0 0 2px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">Nour</p>
+      <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#E8490F">Boss Lady</p>
+      <p style="margin:0 0 14px;padding-left:14px;border-left:2px solid #F0C9BC;font:italic 400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">"I don't have time to feel organised. I need to actually be organised."</p>
+      <p style="margin:0;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Soft Structure foregrounded. Short input flow. Additive re-plan framing. No streaks or guilt mechanics.</p>
+      <span style="display:inline-block;margin-top:14px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;color:#5E7A5E;border:1px solid #A9BBA9;border-radius:6px;padding:4px 8px">SDT · Autonomy HIGH</span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px">
+      <p style="margin:0 0 2px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">Sara</p>
+      <p style="margin:0 0 14px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#E8490F">Mom Life</p>
+      <p style="margin:0 0 14px;padding-left:14px;border-left:2px solid #F0C9BC;font:italic 400 14px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">"Everything I plan is for someone else. I just need one thing that's quietly on my side."</p>
+      <p style="margin:0;font:400 13px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Non-aggressive empty states. Care-framed re-plan prompts. Closet → Soft Structure handoff. Zero punitive UX.</p>
+      <span style="display:inline-block;margin-top:14px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.04em;color:#5E7A5E;border:1px solid #A9BBA9;border-radius:6px;padding:4px 8px">SDT · Relatedness HIGHEST</span>
+    </div>
+  </div>
+
+  <h3 style="margin:48px 0 18px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">When they most want an assistant</h3>
+  <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:2.4fr .6fr 1.2fr;background:#F3F1EC;border-bottom:1px solid rgba(20,19,17,.12)"><span style="padding:13px 20px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.6)">Trigger</span><span style="padding:13px 12px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.6)">%</span><span style="padding:13px 16px;font:600 10.5px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,19,17,.6)">Maps to</span></div>
+    <div style="display:grid;grid-template-columns:2.4fr .6fr 1.2fr;border-bottom:1px solid rgba(20,19,17,.08)"><span style="padding:14px 20px;font:400 13.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.75)">Errands, to-dos, plans — no clear system</span><span style="padding:14px 12px;font:600 13.5px 'Instrument Sans',sans-serif;color:#E8490F">79.1%</span><span style="padding:14px 16px;font:500 13.5px 'Instrument Sans',sans-serif;color:#141311">Soft Structure</span></div>
+    <div style="display:grid;grid-template-columns:2.4fr .6fr 1.2fr;border-bottom:1px solid rgba(20,19,17,.08)"><span style="padding:14px 20px;font:400 13.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.75)">"What do I wear for this?"</span><span style="padding:14px 12px;font:600 13.5px 'Instrument Sans',sans-serif;color:#E8490F">72.8%</span><span style="padding:14px 16px;font:500 13.5px 'Instrument Sans',sans-serif;color:#141311">Closet Concierge</span></div>
+    <div style="display:grid;grid-template-columns:2.4fr .6fr 1.2fr;border-bottom:1px solid rgba(20,19,17,.08)"><span style="padding:14px 20px;font:400 13.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.75)">Recommendations that fit their vibe and budget</span><span style="padding:14px 12px;font:600 13.5px 'Instrument Sans',sans-serif;color:#E8490F">65.1%</span><span style="padding:14px 16px;font:500 13.5px 'Instrument Sans',sans-serif;color:#141311">Closet + Luxury Living</span></div>
+    <div style="display:grid;grid-template-columns:2.4fr .6fr 1.2fr"><span style="padding:14px 20px;font:400 13.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.75)">Getting random thoughts off their mind</span><span style="padding:14px 12px;font:600 13.5px 'Instrument Sans',sans-serif;color:#E8490F">42.7%</span><span style="padding:14px 16px;font:500 13.5px 'Instrument Sans',sans-serif;color:#141311">Diary</span></div>
+  </div>
+  <p style="margin:28px auto 0;font:400 15px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">Two problems revealed themselves — the <strong style="color:#141311;font-weight:600">system problem</strong> (→ Soft Structure) and the <strong style="color:#141311;font-weight:600">decision-fatigue problem</strong> (→ Closet Concierge). The opportunity wasn't "introduce planning." It was to collapse five tools into one home base that actually understands them.</p>
+
+  <div style="margin:40px 0 0">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(20,19,17,.08)">
+      <img src="assets/habibti/img2.png" alt="Module prioritization matrix — persona needs mapped across candidate modules and hero use cases" style="width:100%;height:auto;display:block" />
+    </div>
+    <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Module prioritization matrix — persona needs mapped across candidate modules and hero use cases</p>
+  </div>
+</section>
+
+<section data-screen-label="Sequence quote" style="max-width:900px;margin:70px auto 0;padding:0 30px">
+  <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:24px;padding:44px;text-align:center">
+    <p style="margin:0 auto;max-width:38ch;font:600 clamp(20px,2.5vw,28px)/1.4 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#141311">"The research didn't validate an idea. It forced a sequence. And the sequence is the product."</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 3 What I designed" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Three</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:14ch">What I designed</h2>
+    <p style="margin:16px 0 0;font:400 15.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.6)">Four modules. One system. Multiple doors in.</p>
+  </div>
+
+  <p style="margin:0 0 6px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,19,17,.5);text-align:center">Directions I considered and moved off</p>
+  <p style="margin:10px auto 22px;font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.62);text-align:center;max-width:56ch">The failed directions matter — they're what made the final sequence defensible.</p>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px"><p style="margin:0 0 6px;font:700 15px 'Bricolage Grotesque',sans-serif">Lead MVP with Digital Majlis (community-first)</p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">57.9% modeled paid interest in community made this tempting as the "hook" module. Dropped because a trust product cannot be the entry point on day one — community requires trust the product hasn't earned yet. Kept in the design system, deferred from MVP.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px"><p style="margin:0 0 6px;font:700 15px 'Bricolage Grotesque',sans-serif">Personas as marketing profiles (demographic segmentation)</p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Initial framing treated Layla, Nour, and Sara as archetypes to sell against. Reframed after forced trade-off testing into interface routing rules that change what gets foregrounded, how suggestions are phrased, and what counts as "done." The framing change unlocked the personalization system.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px"><p style="margin:0 0 6px;font:700 15px 'Bricolage Grotesque',sans-serif">Ship all 8 candidate modules as a full ecosystem</p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">The client's initial framing was ecosystem-scale from day one. Forced trade-off testing surfaced that Closet + Soft Structure alone carry 84–86% top-3 presence — narrowing to a 4-module MVP made the sequence defensible and cut ~50% of build scope.</p></div>
+  </div>
+
+  <h3 style="margin:48px 0 14px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">My role and scope</h3>
+  <p style="margin:0 auto;font:400 15px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">I designed the experience from journey → flows → system rules, including the operational layer needed to run it: end-to-end user journey and modular navigation, onboarding and personalization logic, and core flows for the two daily-use wedges, Closet and Soft Structure. The research was commissioned by the client; I designed the module-prioritization instrument, synthesized findings, and translated them into product structure alongside the PM.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px">
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px"><p style="margin:0 0 8px;font:800 clamp(28px,3vw,38px) 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#E8490F">42.1%</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">First-pick rate for Closet Concierge in forced trade-off testing.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px"><p style="margin:0 0 8px;font:800 clamp(28px,3vw,38px) 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#E8490F">86.1%</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Top-3 presence for Soft Structure — highest cross-module relevance.</p></div>
+    <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:26px 26px"><p style="margin:0 0 8px;font:800 clamp(28px,3vw,38px) 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#E8490F">69.2%</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Stated Pro conversion intent (survey-modeled; directional, not a forecast).</p></div>
+  </div>
+
+  <h3 style="margin:52px 0 18px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">How the system works</h3>
+  <div style="background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;overflow-x:auto;box-shadow:0 8px 30px rgba(20,19,17,.08)">
+    <img src="assets/habibti/img3.png" alt="System journey — entry to execution and re-plan" style="width:100%;min-width:900px;height:auto;display:block" />
+  </div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">System journey — entry → context → decompose → allocate → review → execute → re-plan</p>
+
+  <div style="display:flex;flex-direction:column;gap:12px;margin-top:36px">
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">1</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Entry &amp; intent capture <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· text, audio, visual input</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">User opens Soft Structure and selects a use case or writes a free-text request. The system parses goal (what), timeframe (when), and scope (who: self, kids, family, staff).</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">2</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Context &amp; constraints gathering <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· AI at work, backend</span></p><p style="margin:0 0 4px;font:600 12.5px 'Instrument Sans',sans-serif;color:#141311">Auto-fetched</p><p style="margin:0 0 10px;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Dates from the in-app calendar, existing events (work, school, appointments), prayer times, and saved routines (Ramadan mode, work template, summer mode).</p><p style="margin:0 0 4px;font:600 12.5px 'Instrument Sans',sans-serif;color:#141311">Asked only when missing</p><p style="margin:0;font:400 13.5px/1.6 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Free/blocked time windows, energy preference, hard deadlines, and recurrence (one-off vs weekly/monthly/seasonal).</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">3</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Decompose goal → tasks &amp; blocks <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· AI at work, backend</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Intent breaks into atomic items — tasks, supporting prep tasks, and time blocks — each tagged by type (home, work, study, spiritual, social, beauty, admin), effort (small/medium/heavy), flexibility (fixed/flexible/droppable), and location.</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">4</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Time &amp; structure allocation <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· AI at work, backend</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">A timeline is built around anchors (prayer times, fixed events, school/work) and free windows. Fixed items stick or back-plan from deadlines; flexible items fill windows respecting effort, energy, and load caps; location tasks group into "runs." Global caps limit heavy tasks and trim Ramadan/low-energy days.</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">5</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Plan generation &amp; artefacts <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· AI at work, backend</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">Calendar blocks (with optional external sync), interactive to-do lists and recurring-routine checklists, multi-stage reminders for long-horizon tasks, and saved recurrence templates ("Ramadan day," "Thursday Reset," "Side-Hustle Evening").</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">6</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Review, edit, confirm <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· interactive</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">A compact day/week summary lets the user drag blocks, change durations, add or delete tasks, and toggle "strict" vs "soft" adherence (which shifts reminder tone and rescheduling rules). On confirm, the plan locks as Active.</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">7</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Execution &amp; tracking <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· interactive + backend</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">The user marks items done, skipped, or partial. The system logs completion, overruns, and skipped patterns — and for routines, learns which parts get skipped to feed future suggestions.</p></div></div>
+    <div style="display:grid;grid-template-columns:52px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:16px;padding:22px 26px;align-items:start"><span style="font:800 26px 'Bricolage Grotesque',sans-serif;color:#E8B4A0;line-height:1">8</span><div><p style="margin:0 0 8px;font:700 15px 'Bricolage Grotesque',sans-serif">Plan vs reality reconciliation &amp; re-plan <span style="font:400 11px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.45)">· interactive + backend</span></p><p style="margin:0;font:400 13.5px/1.65 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)">At end-of-day (or on demand — "I couldn't finish today") the system surfaces incomplete items, asks which to drop or keep, and auto-reschedules kept items. A low-energy one-tap mode trims today to essentials, moves the rest forward, and swaps in gentler tasks or rest blocks.</p></div></div>
+  </div>
+
+  <h3 style="margin:56px 0 4px;font:700 22px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">The four MVP modules</h3>
+  <p style="margin:8px auto 0;font:400 14px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.6);text-align:center">Two daily-use wedges, one lifestyle concierge, one companion loop.</p>
+
+  <div style="margin-top:32px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;letter-spacing:.02em;color:#E8490F">MVP Flow 01</p>
+    <h4 style="margin:0 0 10px;font:700 22px 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">Soft Structure</h4>
+    <p style="margin:0;font:400 14px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">The planning backbone, including Travel Concierge. Cultural fluency here isn't a theme — it's a planning primitive. The system plans around prayer times, work hours, and school runs as defaults. "Between two prayers" is a valid focus block; Friday prayer and family lunch anchor the week, not a generic Monday reset. Travel lives inside Soft Structure because travel is a planning moment, not a separate product. When a plan gets compressed, the system surfaces "here's what still fits today" — never an error state. The framing is always additive.</p>
+  </div>
+  <div style="margin-top:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(20,19,17,.08)"><img src="assets/habibti/img4.png" alt="Soft Structure backend journey with LLM context, permission gates, and system learning" style="width:100%;height:auto;display:block" /></div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Soft Structure — backend journey with LLM context, permission gates, and system learning</p>
+  <div style="margin-top:22px"><img src="assets/habibti/img5.png" alt="Soft Structure screens — from prompt chips to prayer-based daily plan" style="width:100%;height:auto;display:block" /></div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Soft Structure screens — from prompt chips to prayer-based daily plan</p>
+  <div style="margin-top:22px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(20,19,17,.08)"><img src="assets/habibti/img6.png" alt="Travel and Packing — destination context to itinerary to wardrobe cross-reference to packing" style="width:100%;height:auto;display:block" /></div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Travel &amp; Packing — destination context → itinerary → wardrobe cross-reference → packing</p>
+
+  <div style="margin-top:32px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;letter-spacing:.02em;color:#E8490F">MVP Flow 02</p>
+    <h4 style="margin:0 0 10px;font:700 22px 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">Closet Concierge</h4>
+    <p style="margin:0;font:400 14px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">High-frequency decision offloading for a job that repeats multiple times per week, carries real social stakes, and is deeply culturally coded. Capture context fast — occasion, constraints, vibe — without long forms. Start from what the user already owns. Return 2–3 confident outfit options, not a scroll grid. Hand off into Soft Structure when the moment becomes execution-heavy. The wardrobe loop compounds: the more the user saves, the more accurate suggestions become — value without adding features.</p>
+  </div>
+  <div style="margin-top:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(20,19,17,.08)"><img src="assets/habibti/img7.png" alt="Closet Concierge — context capture to wardrobe check to AI styling to feedback loop" style="width:100%;height:auto;display:block" /></div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Closet Concierge — context capture → wardrobe check → AI styling → feedback loop</p>
+  <div style="margin-top:22px"><img src="assets/habibti/img8.png" alt="Closet Concierge screens — request to occasion to styled result to wardrobe builder" style="width:100%;height:auto;display:block" /></div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Closet Concierge screens — request → occasion → styled result → wardrobe builder</p>
+
+  <div style="margin-top:32px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;letter-spacing:.02em;color:#E8490F">MVP Flow 03</p>
+    <h4 style="margin:0 0 10px;font:700 22px 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">Luxury Living</h4>
+    <p style="margin:0;font:400 14px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">Covers the moments where the real question is "How do I show up correctly?" — etiquette, gifting, hosting, and taste in high-stakes social situations. Concise, confident guidance that feels like a trusted concierge, not a search engine. One clear answer, delivered with authority. No scroll.</p>
+  </div>
+  <div style="margin-top:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(20,19,17,.08)"><img src="assets/habibti/img9.png" alt="Luxury Living — three entry paths (shopping, etiquette, lifestyle) with shared feedback loop" style="width:100%;height:auto;display:block" /></div>
+  <p style="margin:12px 0 0;text-align:center;font:400 12.5px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.5)">Luxury Living — three entry paths (shopping, etiquette, lifestyle) with a shared feedback loop</p>
+
+  <div style="margin-top:32px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:20px;padding:30px 34px">
+    <p style="margin:0 0 8px;font:800 12px 'Bricolage Grotesque',sans-serif;letter-spacing:.02em;color:#E8490F">MVP Flow 04</p>
+    <h4 style="margin:0 0 10px;font:700 22px 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em">My Diary</h4>
+    <p style="margin:0;font:400 14px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.7)">How Habibti becomes a companion instead of a tool. Reflection creates continuity; continuity creates return; return creates ecosystem permission. Intentionally low-friction — a gentle prompt, a short response, a personal record that builds over time. The product starts to know who the user is becoming, not just what she needs to do today.</p>
+  </div>
+
+  <h3 style="margin:52px 0 14px;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-align:center">Personalised onboarding</h3>
+  <p style="margin:0 auto;font:400 15px/1.75 'Instrument Sans',sans-serif;color:rgba(20,19,17,.72);text-align:center;max-width:66ch">Onboarding captures time zone, language, routine shape, personalization depth, and dietary restrictions. Those choices feed a rules engine that determines tone, homepage block order, keyword layer, and AI response style — enough signal to make the product feel personal without a heavy setup cliff.</p>
+</section>
+
+<section data-screen-label="AI usage" style="max-width:900px;margin:70px auto 0;padding:0 30px">
+  <div style="background:linear-gradient(115deg,#2A0E24,#6B1E45);border:1px solid rgba(255,107,44,.35);border-radius:24px;padding:44px 46px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">Designing solo — with AI in the room</p>
+    <h3 style="margin:0 0 16px;font:700 24px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#fff">Structured disagreement is what you lose when you design alone</h3>
+    <p style="margin:0 0 12px;font:400 14.5px/1.75 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85);max-width:64ch">I used AI at four specific points: pressure-testing edge cases per flow before FigJam (the "wait, what happens when…" role a second designer plays); killing wrong directions in words before building them; drafting microcopy for complex states to react to and improve; and pre-engineering review to surface spec ambiguities before they reached a developer.</p>
+    <p style="margin:0;font:400 14.5px/1.75 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85);max-width:64ch">Before any persona work, I used AI to challenge the behavioral clusters I was building — not to generate them.</p>
+    <p style="margin:22px 0 0;font:600 clamp(18px,2vw,22px)/1.4 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#FFD9C2;max-width:32ch">"AI didn't make the design decisions. It made the space to make better ones."</p>
+  </div>
+</section>
+
+<section data-screen-label="Ch 4 Reflections" style="max-width:900px;margin:0 auto;padding:0 30px">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+    <div style="width:1px;height:60px;background:rgba(20,19,17,.25);margin-bottom:26px"></div>
+    <p style="margin:0 0 12px;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E8490F">Chapter Four</p>
+    <h2 style="margin:0;font:700 clamp(28px,3.4vw,44px)/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-align:center;max-width:16ch">What I'd do differently</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">01</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Scenario-based usability testing before finishing flows.</strong> I designed from survey data, not observation. A wedding-prep week, a travel pack under pressure, a low-energy routine week — real scenarios would have sharpened the re-plan mechanics before anything shipped.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">02</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Experience metrics defined on day one.</strong> Not DAUs — time-to-first-outfit, plans edited vs abandoned, repeat Closet usage within 7 days. Pre-beta, not reverse-engineered from whatever surfaces post-launch.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">03</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">Cross-module handoffs specced fully, not assumed.</strong> The logic is right — outfit → prep checklist, trip → packing and reminders. The automation triggers need a proper spec pass. That's where a useful tool becomes a companion.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">04</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">RTL and localisation as a system, not a later skin.</strong> It changes component structure, text expansion, and input patterns. The longer it waits, the more expensive the rework.</span></div>
+    <div style="display:grid;grid-template-columns:56px 1fr;gap:20px;background:#FFFFFF;border:1px solid rgba(20,19,17,.12);border-radius:18px;padding:24px 28px;align-items:start"><span style="font:800 15px 'Bricolage Grotesque',sans-serif;color:#E8490F">05</span><span style="font:400 14px/1.7 'Instrument Sans',sans-serif;color:rgba(20,19,17,.68)"><strong style="color:#141311;font-weight:600">AI working sessions saved as design artefacts.</strong> The scenario and direction stress-tests were part of the design process. Next time they go in the record alongside wireframes and research notes.</span></div>
+  </div>
+  <div style="margin:28px auto 0;background:linear-gradient(115deg,#2A0E24,#6B1E45);border:1px solid rgba(255,107,44,.35);border-radius:20px;padding:28px 32px">
+    <p style="margin:0 0 8px;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FF6B2C">Attribution</p>
+    <p style="margin:0;font:400 14px/1.75 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Primary research commissioned by the client and fielded by a specialist agency panel; I designed the module-prioritization instrument. Colour scheme and basic design system provided by the client; I tokenized them into a scalable component system in Figma Make. AI used for scenario pressure-testing, structured disagreement on early clusters, and microcopy first drafts. <strong style="font-weight:600;color:#fff">All product decisions — MVP sequencing, journeys, personalisation, onboarding, trust design, operational requirements, and execution — were led and delivered by me.</strong></p>
+  </div>
+</section>
+
+<section data-screen-label="Contact" style="padding:100px 14px 14px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="border-radius:28px;overflow:hidden;background:linear-gradient(120deg,#2A0E24 0%,#C1330E 44%,#F4581C 70%,#6B1E45 118%);padding:64px 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 45%">
+      <div>
+        <p style="margin:0 0 14px;font:600 14px 'Instrument Sans',sans-serif;color:#FFD9C2">See more work</p>
+        <h2 style="margin:0;font:800 clamp(40px,5.4vw,80px)/0.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:#fff">Next case study</h2>
+      </div>
+      <div>
+        <p style="margin:0 0 24px;font:400 15px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85)">Machaxi — reshaping a coaching product from plan management into a full learning lifecycle. Or head back to all projects.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <a href="Machaxi%20Case%20Study.dc.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;background:#0C0B0A;color:#fff;font:600 14px 'Instrument Sans',sans-serif;padding:12px 12px 12px 22px;border-radius:999px;transition:transform .2s" style-hover="transform:scale(1.04);color:#fff">Machaxi case study<span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#F4581C;font-size:13px">→</span></a>
+          <a href="index.html#work" style="text-decoration:none;display:flex;align-items:center;justify-content:center;font:600 14px 'Instrument Sans',sans-serif;border:1px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.15);color:#fff">All work</a>
+        </div>
+      </div>
+    </div>
+    <footer style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:26px 30px;font:500 13px 'Instrument Sans',sans-serif;color:rgba(20,19,17,.55)">
+      <span>© 2026 Vidushi Maheshwari · Product Designer</span>
+      <span style="display:flex;gap:26px">
+        <a href="index.html" style="text-decoration:none">Home</a>
+        <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:none">Email</a>
+        <a href="https://www.linkedin.com/in/iamvidushi" style="text-decoration:none" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </footer>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

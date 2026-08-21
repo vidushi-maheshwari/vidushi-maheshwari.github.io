@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0C0B0A;color:#F5F3F0;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{color:#FF6B2C}
+::selection{background:#F4581C;color:#0C0B0A}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+@media (max-width:768px){
+  [data-r="hero-outer"]{padding:10px 10px 0 !important}
+  [data-r="hero-shell"]{min-height:78vh !important}
+  [data-r="nav-links"]{gap:4px !important}
+  [data-r="nav-links"] a{padding:7px 11px !important;font-size:12.5px !important}
+  [data-r="hero-image"]{width:62% !important;opacity:1 !important}
+  [data-r="hero-content"]{padding:16px 28px !important;max-width:100% !important}
+  [data-r="hero-stats"]{flex-wrap:wrap !important;padding:20px 28px 24px !important;gap:16px 26px !important}
+  [data-r="companies"]{padding:20px 28px !important}
+  [data-r="section"]{padding-left:28px !important;padding-right:28px !important}
+  [data-r="contact-section"]{padding:70px 12px 12px !important}
+  [data-r="contact-panel"]{padding:52px 36px !important}
+  [data-r="section-header"]{grid-template-columns:1fr !important;gap:18px !important}
+  [data-r="how-header"]{grid-template-columns:1fr !important;gap:18px !important;margin:60px 0 16px !important}
+  [data-r="case-featured"]{grid-template-columns:1fr !important}
+  [data-r="case-featured-img"]{min-height:clamp(220px,42vw,320px) !important}
+  [data-r="case-grid"]{grid-template-columns:repeat(auto-fit,minmax(260px,1fr)) !important}
+  [data-r="about-grid"]{grid-template-columns:1fr !important;align-items:stretch !important;padding:40px !important;gap:32px !important}
+  [data-r="about-image"]{order:-1 !important}
+  [data-r="about-image-box"]{height:clamp(260px,48vw,380px) !important}
+  [data-r="about-heading"]{width:100% !important;max-width:100% !important}
+  [data-r="cards-grid"]{grid-template-columns:1fr 1fr !important}
+  [data-r="contact-grid"]{grid-template-columns:1fr !important;gap:28px !important}
+}
+@media (max-width:480px){
+  [data-r="hero-outer"]{padding:8px 8px 0 !important}
+  [data-r="hero-shell"]{min-height:auto !important;border-radius:20px !important}
+  [data-r="nav"]{flex-wrap:wrap !important;gap:10px !important;padding:16px 18px !important}
+  [data-r="nav-links"] a{display:none !important}
+  [data-r="nav-links"] button{margin-left:0 !important}
+  [data-r="hero-image"]{position:static !important;width:100% !important;height:52vw !important;min-height:220px !important;opacity:1 !important}
+  [data-r="hero-image"] img{object-position:center 25% !important}
+  [data-r="hero-content"]{padding:22px 18px 8px !important}
+  [data-r="hero-stats"]{padding:16px 18px 20px !important;gap:14px 22px !important}
+  [data-r="companies"]{padding:16px 18px !important;flex-direction:column !important;align-items:flex-start !important;gap:12px !important}
+  [data-r="section"]{padding-left:18px !important;padding-right:18px !important}
+  [data-r="contact-section"]{padding:56px 8px 8px !important}
+  [data-r="contact-panel"]{padding:36px 20px !important}
+  [data-r="case-featured-img"]{min-height:56vw !important}
+  [data-r="case-grid"]{grid-template-columns:1fr !important}
+  [data-r="cards-grid"]{grid-template-columns:1fr !important}
+  [data-r="about-grid"]{grid-template-columns:1fr !important;align-items:stretch !important;padding:24px !important}
+  [data-r="about-image"]{order:-1 !important}
+  [data-r="about-image-box"]{height:60vw !important}
+  [data-r="about-heading"]{width:100% !important;max-width:100% !important}
+  [data-r="footer"]{justify-content:center !important;text-align:center !important}
+}
+</style>
+</helmet>
+
+<div id="top" data-screen-label="Hero" data-r="hero-outer" style="padding:14px 14px 0">
+  <div data-r="hero-shell" style="position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(115deg,#3A1204 0%,#8C2807 34%,#E8490F 68%,#FF8A3C 100%);min-height:92vh;display:flex;flex-direction:column;animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both">
+    <div data-r="hero-image" style="position:absolute;top:0;right:0;bottom:0;width:56%">
+      <img src="assets/hero-portrait.jpg" alt="Vidushi Maheshwari" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,#B23509 0%,rgba(178,53,9,.45) 30%,rgba(178,53,9,0) 60%),linear-gradient(0deg,rgba(20,6,1,.55),rgba(20,6,1,0) 45%);pointer-events:none;mix-blend-mode:multiply"></div>
+    </div>
+    <nav data-screen-label="Nav" data-r="nav" style="position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:22px 30px">
+      <a href="#top" style="text-decoration:none;font:700 17px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">vidushi<span style="color:#FFD9C2">.</span></a>
+      <div data-r="nav-links" style="display:flex;align-items:center;gap:8px">
+        <a href="#work" style="text-decoration:none;font:500 13.5px 'Instrument Sans',sans-serif;padding:9px 16px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.14);color:#fff">Work</a>
+        <a href="#about" style="text-decoration:none;font:500 13.5px 'Instrument Sans',sans-serif;padding:9px 16px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.14);color:#fff">About</a>
+        <a href="#contact" style="text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:10px;background:#fff;color:#141311;font:600 13.5px 'Instrument Sans',sans-serif;padding:8px 8px 8px 18px;border-radius:999px;margin-left:8px;transition:transform .2s" style-hover="transform:scale(1.04);color:#141311">Get in touch<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#F4581C;color:#fff;font-size:13px">→</span></a>
+      </div>
+    </nav>
+    <div data-r="hero-content" style="position:relative;z-index:4;flex:1;display:flex;flex-direction:column;justify-content:center;padding:20px 44px;max-width:760px">
+      <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
+        <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:9px;font:500 12.5px 'Instrument Sans',sans-serif;background:rgba(12,11,10,.35);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 16px;margin-bottom:28px;animation:fadeUp .7s .25s cubic-bezier(.2,.7,.2,1) both">
+          <span style="width:7px;height:7px;border-radius:50%;background:#7CFF9B;animation:pulse 1.8s ease-in-out infinite"></span>
+          Available for Product Designer roles · Remote or relocation
+        </div>
+      </sc-if>
+      <p style="margin:0 0 6px;font:500 17px 'Instrument Sans',sans-serif;color:#FFD9C2;animation:fadeUp .7s .35s cubic-bezier(.2,.7,.2,1) both">Hey, I'm Vidushi —</p>
+      <h1 style="margin:0;font:800 clamp(52px,7vw,108px)/0.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;animation:fadeUp .7s .45s cubic-bezier(.2,.7,.2,1) both">Product<br>Designer</h1>
+      <p style="margin:26px 0 0;max-width:42ch;font:400 16px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.85);animation:fadeUp .7s .55s cubic-bezier(.2,.7,.2,1) both">still learning, four-plus years in. I've worked across highways, AI products, sports tech, agritech, and field tools — and mostly what I've learned is to <strong style="font-weight:600;color:#fff">ask better questions before drawing anything.</strong></p>
+    </div>
+    <div data-r="hero-stats" style="position:relative;z-index:4;display:flex;justify-content:space-between;gap:24px;padding:26px 44px 30px;border-top:1px solid rgba(255,255,255,.18);background:rgba(12,11,10,.25);backdrop-filter:blur(8px);animation:fadeUp .7s .65s cubic-bezier(.2,.7,.2,1) both">
+      <div><p style="margin:0 0 5px;font:600 12px 'Instrument Sans',sans-serif;color:#FFB98C">#01</p><p style="margin:0;font:600 15px 'Bricolage Grotesque',sans-serif">B2C</p></div>
+      <div><p style="margin:0 0 5px;font:600 12px 'Instrument Sans',sans-serif;color:#FFB98C">#02</p><p style="margin:0;font:600 15px 'Bricolage Grotesque',sans-serif">B2B</p></div>
+      <div><p style="margin:0 0 5px;font:600 12px 'Instrument Sans',sans-serif;color:#FFB98C">#03</p><p style="margin:0;font:600 15px 'Bricolage Grotesque',sans-serif">B2G</p></div>
+      <div><p style="margin:0 0 5px;font:600 12px 'Instrument Sans',sans-serif;color:#FFB98C">#04</p><p style="margin:0;font:600 15px 'Bricolage Grotesque',sans-serif">Conversational AI</p></div>
+      <div><p style="margin:0 0 5px;font:600 12px 'Instrument Sans',sans-serif;color:#FFB98C">#05</p><p style="margin:0;font:600 15px 'Bricolage Grotesque',sans-serif">Operational UX</p></div>
+    </div>
+  </div>
+</div>
+
+<sc-if value="{{ showCompanies }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Companies" data-r="companies" style="display:flex;align-items:center;gap:40px;padding:26px 44px;overflow:hidden">
+  <p style="margin:0;flex:none;font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45);max-width:120px;line-height:1.5">Teams I've shipped with</p>
+  <div style="flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
+    <div style="display:flex;width:max-content;animation:marquee 32s linear infinite">
+      <div style="display:flex;align-items:center;gap:87px;padding-right:87px;white-space:nowrap">
+        <img src="assets/logos/logo-nhai.webp" alt="NHAI" style="height:37px;width:auto;opacity:.85">
+        <div style="display:flex;align-items:center;gap:87px;white-space:nowrap;filter:brightness(0) invert(1)">
+          <img src="assets/logos/logo-habibti.png" alt="Your AI Habibti" style="height:40px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-machaxi.png" alt="Machaxi" style="height:30px;width:auto;opacity:.85">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:90px;height:34px;font:700 23px 'Bricolage Grotesque',sans-serif;color:rgba(255,255,255,.75)">❖ Raithu</span>
+          <img src="assets/logos/logo-amnic.png" alt="Amnic" style="height:34px;width:92px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-cirqlar.png" alt="CirQlar" style="height:24px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-fave.png" alt="Fave" style="height:28px;width:76px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-instadigin.png" alt="InstaDigin" style="height:24px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-rapid.png" alt="Rapid" style="height:28px;width:76px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-shyfl.png" alt="Shyfl" style="height:28px;width:76px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-stitch.png" alt="Stitch" style="height:30px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-ultratech.png" alt="UltraTech" style="height:24px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-vedantu.png" alt="Vedantu" style="height:24px;width:auto;opacity:.85">
+        </div>
+      </div>
+      <div aria-hidden="true" style="display:flex;align-items:center;gap:87px;padding-right:87px;white-space:nowrap">
+        <img src="assets/logos/logo-nhai.webp" alt="" style="height:37px;width:auto;opacity:.85">
+        <div style="display:flex;align-items:center;gap:87px;white-space:nowrap;filter:brightness(0) invert(1)">
+          <img src="assets/logos/logo-habibti.png" alt="" style="height:40px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-machaxi.png" alt="" style="height:30px;width:auto;opacity:.85">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:90px;height:34px;font:700 23px 'Bricolage Grotesque',sans-serif;color:rgba(255,255,255,.75)">❖ Raithu</span>
+          <img src="assets/logos/logo-amnic.png" alt="" style="height:34px;width:92px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-cirqlar.png" alt="" style="height:24px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-fave.png" alt="" style="height:28px;width:76px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-instadigin.png" alt="" style="height:24px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-rapid.png" alt="" style="height:28px;width:76px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-shyfl.png" alt="" style="height:28px;width:76px;object-fit:contain;opacity:.85">
+          <img src="assets/logos/logo-stitch.png" alt="" style="height:30px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-ultratech.png" alt="" style="height:24px;width:auto;opacity:.85">
+          <img src="assets/logos/logo-vedantu.png" alt="" style="height:24px;width:auto;opacity:.85">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<section id="work" data-screen-label="Selected Work" data-r="section" style="padding:90px 44px 20px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div data-r="section-header" style="display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:end;margin-bottom:44px">
+      <div>
+        <p style="margin:0 0 14px;font:600 14px 'Instrument Sans',sans-serif;color:#FF6B2C">Selected Work</p>
+        <h2 style="margin:0;font:700 clamp(34px,4vw,56px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em">Design judgment, not just polished screens</h2>
+      </div>
+      <p style="margin:0 0 6px;font:400 15px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6)">Five projects across five industries. Each one documents the real problem, failed directions, key decisions, and what actually changed.</p>
+    </div>
+
+    <a href="ECB%20Case%20Study.dc.html" data-r="case-featured" style="display:grid;grid-template-columns:1.15fr 1fr;gap:0;text-decoration:none;color:#F5F3F0;background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;margin-bottom:24px;transition:border-color .3s,transform .3s" style-hover="border-color:rgba(255,107,44,.55);transform:translateY(-4px);color:#F5F3F0">
+      <span data-r="case-featured-img" style="display:block;position:relative;min-height:380px">
+        <img src="assets/home/cover-ecb.avif" alt="Delhi–Mumbai Expressway aerial view" style="width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:block">
+      </span>
+      <span style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:48px 44px">
+        <span style="display:flex;align-items:center;gap:12px;justify-content:space-between"><span style="font:600 12px 'Instrument Sans',sans-serif;color:#FF6B2C">NHAI</span><span style="font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.5);text-align:right">Safety-Critical</span></span>
+        <span style="font:700 clamp(24px,2.2vw,34px)/1.15 'Bricolage Grotesque',sans-serif;letter-spacing:-.015em;text-wrap:pretty">When India's longest expressway went digital and emergencies couldn't wait for the software to catch up</span>
+        <span style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+          <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Operational UX</span>
+          <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Government</span>
+        </span>
+        <span style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;margin-top:10px;font:600 13.5px 'Instrument Sans',sans-serif;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:9px 10px 9px 20px">View case study<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#F4581C;color:#fff;font-size:13px">→</span></span>
+      </span>
+    </a>
+
+    <div data-r="case-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <a href="AI%20Habibti%20Case%20Study.dc.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F5F3F0;background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;transition:border-color .3s,transform .3s" style-hover="border-color:rgba(255,107,44,.55);transform:translateY(-4px);color:#F5F3F0">
+        <span data-r="case-grid-img" style="display:block;height:280px;position:relative">
+          <img src="assets/home/cover-habibti.png" alt="Your AI Habibti — module screens" style="width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:top;display:block">
+        </span>
+        <span style="display:flex;flex-direction:column;gap:12px;padding:30px 32px 34px">
+          <span style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 12px 'Instrument Sans',sans-serif;color:#FF6B2C">Your AI Habibti</span><span style="font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">Consumer AI</span></span>
+          <span style="font:700 22px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-wrap:pretty">A culturally fluent AI companion for Arab, Desi, and global women</span>
+          <span style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+            <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Conversational UX</span>
+            <span style="font:600 12px 'Instrument Sans',sans-serif;background:rgba(244,88,28,.18);border:1px solid rgba(255,107,44,.45);color:#FF6B2C;border-radius:999px;padding:6px 13px">Executed with AI</span>
+          </span>
+        </span>
+      </a>
+      <a href="VIDS%20Case%20Study.dc.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F5F3F0;background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;transition:border-color .3s,transform .3s" style-hover="border-color:rgba(255,107,44,.55);transform:translateY(-4px);color:#F5F3F0">
+        <span data-r="case-grid-img" style="display:block;height:280px;position:relative">
+          <img src="assets/home/cover-incident.webp" alt="Real-time accident detection overlay on highway aerial footage" style="width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:block">
+        </span>
+        <span style="display:flex;flex-direction:column;gap:12px;padding:30px 32px 34px">
+          <span style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 12px 'Instrument Sans',sans-serif;color:#FF6B2C">NHAI</span><span style="font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">Real - Time Monitoring</span></span>
+          <span style="font:700 22px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-wrap:pretty">Real-time incident detection for a 200 km highway corridor</span>
+          <span style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+            <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Operational UX</span>
+            <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Government</span>
+          </span>
+        </span>
+      </a>
+      <a href="Machaxi%20Case%20Study.dc.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F5F3F0;background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;transition:border-color .3s,transform .3s" style-hover="border-color:rgba(255,107,44,.55);transform:translateY(-4px);color:#F5F3F0">
+        <span data-r="case-grid-img" style="display:block;height:280px;position:relative">
+          <img src="assets/home/cover-machaxi.webp" alt="Machaxi indoor badminton courts" style="width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:block">
+        </span>
+        <span style="display:flex;flex-direction:column;gap:12px;padding:30px 32px 34px">
+          <span style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 12px 'Instrument Sans',sans-serif;color:#FF6B2C">Machaxi</span><span style="font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">Sports Tech</span></span>
+          <span style="font:700 22px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-wrap:pretty">From plan management to a full learning lifecycle</span>
+          <span style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+            <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Product Strategy</span>
+            <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">B2C</span>
+          </span>
+        </span>
+      </a>
+      <a href="Raithu%20Case%20Study.dc.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F5F3F0;background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;transition:border-color .3s,transform .3s" style-hover="border-color:rgba(255,107,44,.55);transform:translateY(-4px);color:#F5F3F0">
+        <span data-r="case-grid-img" style="display:block;height:280px;position:relative">
+          <img src="assets/home/cover-raithu.png" alt="Raithu offline GPS field mapping route overlay" style="width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:block">
+        </span>
+        <span style="display:flex;flex-direction:column;gap:12px;padding:30px 32px 34px">
+          <span style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 12px 'Instrument Sans',sans-serif;color:#FF6B2C">Raithu</span><span style="font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">AgriTech · NDA</span></span>
+          <span style="font:700 22px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;text-wrap:pretty">Mapping farmland the system can't see — offline GPS for field technicians</span>
+          <span style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+            <span style="font:500 12px 'Instrument Sans',sans-serif;background:rgba(255,255,255,.07);border-radius:999px;padding:6px 13px">Offline-first</span>
+            <span style="font:600 12px 'Instrument Sans',sans-serif;background:rgba(244,88,28,.18);border:1px solid rgba(255,107,44,.45);color:#FF6B2C;border-radius:999px;padding:6px 13px">Executed with AI</span>
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about" data-screen-label="About" data-r="section" style="padding:110px 44px 30px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div data-r="about-grid" style="display:grid;grid-template-columns:1fr 420px;gap:70px;align-items:center;background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:56px">
+      <div>
+        <p style="margin:0 0 16px;font:600 14px 'Instrument Sans',sans-serif;color:#FF6B2C">About me</p>
+        <h2 data-r="about-heading" style="margin:0 0 26px;font:700 clamp(32px,3.6vw,52px)/1.08 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em">Still learning. Still asking questions.</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;font:400 15px/1.7 'Instrument Sans',sans-serif;color:rgba(255,255,255,.68);max-width:56ch">
+          <p style="margin:0">I've had the opportunity to work across 5+ different industries, and I've learned not to take a brief at face value. More often than not, it's a starting point rather than the answer — and getting to the real problem usually takes a fair number of questions, and a few wrong turns along the way.</p>
+          <p style="margin:0">What I try to pay attention to is <strong style="color:#fff;font-weight:600">where people hesitate</strong>, what they reach for under pressure, and what makes something feel trustworthy enough to actually use. I stay close to the work end-to-end, from early conversations to the handoff — it's the only way I've found to keep learning.</p>
+        </div>
+      </div>
+      <div data-r="about-image" style="position:relative">
+        <div data-r="about-image-box" style="border-radius:20px;overflow:hidden;height:460px;position:relative">
+          <img src="assets/home/about-portrait.jpg" alt="Vidushi Maheshwari" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+    </div>
+
+    <div data-r="how-header" style="display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:end;margin:90px 0 40px">
+      <div>
+        <p style="margin:0 0 14px;font:600 14px 'Instrument Sans',sans-serif;color:#FF6B2C">How I work</p>
+        <h2 style="margin:0;font:700 clamp(30px,3.4vw,48px)/1.08 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em">A few things I try to hold onto</h2>
+      </div>
+      <p style="margin:0 0 4px;font:400 15px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6)">These are the things I keep coming back to, project after project.</p>
+    </div>
+    <div data-r="cards-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:36px 32px">
+        <div style="width:40px;height:3px;background:#F4581C;border-radius:2px;margin-bottom:26px"></div>
+        <p style="margin:0 0 10px;font:600 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">01</p>
+        <h3 style="margin:0 0 14px;font:700 21px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">Understand before I design</h3>
+        <p style="margin:0;font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6)">I'd rather spend a week understanding a problem than a week designing the wrong solution to it. That time upfront tends to pay for itself later.</p>
+      </div>
+      <div style="background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:36px 32px">
+        <div style="width:40px;height:3px;background:#F4581C;border-radius:2px;margin-bottom:26px"></div>
+        <p style="margin:0 0 10px;font:600 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">02</p>
+        <h3 style="margin:0 0 14px;font:700 21px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">I try to be honest about trade-offs</h3>
+        <p style="margin:0;font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6)">Every design leaves something out. I'd rather name that trade-off out loud so the team can weigh in, instead of quietly deciding it for everyone.</p>
+      </div>
+      <div style="background:#171512;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:36px 32px">
+        <div style="width:40px;height:3px;background:#F4581C;border-radius:2px;margin-bottom:26px"></div>
+        <p style="margin:0 0 10px;font:600 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">03</p>
+        <h3 style="margin:0 0 14px;font:700 21px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em">I think about the hardest moment, not the easiest</h3>
+        <p style="margin:0;font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6)">Field heat, patchy GPS, a night shift, a distressed caller — if it holds up there, it'll hold up on a good day too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="Contact" data-r="contact-section" style="padding:100px 14px 14px">
+  <div style="max-width:1280px;margin:0 auto">
+    <div data-r="contact-panel" style="position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(120deg,#2A0D03 0%,#C1330E 42%,#F4581C 68%,#1B4A44 115%);padding:80px 56px">
+      <div data-r="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;position:relative">
+        <div>
+          <p style="margin:0 0 14px;font:600 14px 'Instrument Sans',sans-serif;color:#FFD9C2">Get in touch</p>
+          <h2 style="margin:0;font:800 clamp(56px,8vw,120px)/0.95 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em">Contact</h2>
+        </div>
+        <div>
+          <p style="margin:0 0 8px;font:700 20px/1.35 'Bricolage Grotesque',sans-serif;text-wrap:pretty">Have a complex operational or field-tool problem? That's my favourite kind.</p>
+          <p style="margin:0 0 28px;font:400 15px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.8)">Send the role, the product, or just the messy problem statement. The harder the brief, the more interested I am.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+            <a href="https://www.linkedin.com/in/iamvidushi" target="_blank" rel="noopener" style="text-decoration:none;font:600 14px 'Instrument Sans',sans-serif;border:1px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:999px;transition:background .2s" style-hover="background:rgba(255,255,255,.15);color:#fff">LinkedIn ↗</a>
+          </div>
+          <p style="margin:20px 0 0;font:400 13px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.65)">Prefer to just email? <a href="mailto:maheshwarividushi@gmail.com" style="text-decoration:underline;color:rgba(255,255,255,.85)">maheshwarividushi@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <footer data-r="footer" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:26px 30px;font:500 13px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.45)">
+      <span>© 2026 Vidushi Maheshwari · Product Designer</span>
+      <span style="display:flex;gap:26px">
+        <a href="https://www.linkedin.com/in/iamvidushi" target="_blank" rel="noopener" style="text-decoration:none">LinkedIn</a>
+      </span>
+    </footer>
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showCompanies&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showAvailability: this.props.showAvailability ?? true,
+      showCompanies: this.props.showCompanies ?? true
+    };
+  }
+}
+
+</script>
+</body>
+</html>
