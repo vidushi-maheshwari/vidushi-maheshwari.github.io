@@ -45,7 +45,18 @@ nav[data-screen-label="Nav"]{flex-wrap:wrap!important;gap:10px!important;padding
     <a href="index.html" style="text-decoration:none;font:700 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#F5F3F0">vidushi<span style="color:#FF6B2C">.</span></a>
     <div style="display:flex;flex-direction:column;gap:8px">
       <h1 style="margin:0;font:700 26px/1.2 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#F5F3F0">This case study is protected</h1>
-      <p style="margin:0;font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6)">Raithu is under NDA. Enter the passcode to view — or <a href="mailto:maheshwarividushi@gmail.com" style="color:#FF6B2C">email me</a> to request access.</p>
+      <p style="margin:0;font:400 14px/1.65 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px">
+        <span>Raithu is under NDA. Enter the passcode to view — or <a href="mailto:maheshwarividushi@gmail.com" style="color:#FF6B2C">email me</a> to request access.</span>
+        <button type="button" onClick="{{ copyEmail }}" title="Copy email address" style="display:inline-flex;align-items:center;gap:5px;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px 3px 8px;font:500 12px 'Instrument Sans',sans-serif;color:rgba(255,255,255,.6);cursor:pointer;transition:border-color .2s,color .2s" style-hover="border-color:#FF6B2C;color:#FF6B2C">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <sc-if value="{{ emailCopied }}" hint-placeholder-val="{{ false }}">
+            <span>Copied!</span>
+          </sc-if>
+          <sc-if value="{{ !emailCopied }}" hint-placeholder-val="{{ true }}">
+            <span>maheshwarividushi@gmail.com</span>
+          </sc-if>
+        </button>
+      </p>
     </div>
     <form onSubmit="{{ checkPasscode }}" style="display:flex;flex-direction:column;gap:12px;width:100%">
       <input type="password" inputMode="numeric" autoComplete="off" placeholder="Enter passcode" value="{{ passcodeInput }}" onChange="{{ onPasscodeChange }}" autoFocus="{{ true }}" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:14px 22px;font:500 16px 'Instrument Sans',sans-serif;color:#F5F3F0;text-align:center;letter-spacing:.3em;outline:none" style-focus="border-color:#F4581C">
@@ -373,12 +384,13 @@ nav[data-screen-label="Nav"]{flex-wrap:wrap!important;gap:10px!important;padding
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { unlocked: false, passcodeInput: '', passcodeError: false };
+  state = { unlocked: false, passcodeInput: '', passcodeError: false, emailCopied: false };
   renderVals() {
     return {
       locked: !this.state.unlocked,
       passcodeInput: this.state.passcodeInput,
       passcodeError: this.state.passcodeError,
+      emailCopied: this.state.emailCopied,
       onPasscodeChange: (e) => this.setState({ passcodeInput: e.target.value, passcodeError: false }),
       checkPasscode: (e) => {
         e.preventDefault();
@@ -387,6 +399,13 @@ class Component extends DCLogic {
         } else {
           this.setState({ passcodeError: true, passcodeInput: '' });
         }
+      },
+      copyEmail: (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText('maheshwarividushi@gmail.com').then(() => {
+          this.setState({ emailCopied: true });
+          setTimeout(() => this.setState({ emailCopied: false }), 1800);
+        });
       }
     };
   }
